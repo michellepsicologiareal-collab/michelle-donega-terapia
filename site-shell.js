@@ -1,61 +1,72 @@
-﻿(() => {
+(() => {
   const nav = document.querySelector('.site-nav, body > nav');
+  if (!nav) return;
+
+  const whatsapp = 'https://wa.me/5511947388423?text=Ol%C3%A1%20Michelle%2C%20gostaria%20de%20agendar%20uma%20conversa%20inicial.';
+
   document.body.classList.remove('has-desktop-sidebar');
   document.querySelector('[data-desktop-sidebar]')?.remove();
+  document.querySelector('[data-mobile-menu]')?.remove();
 
-  if (nav && !document.querySelector('[data-mobile-menu]')) {
-    const button = document.createElement('button');
-    button.className = 'mobile-menu-toggle';
-    button.type = 'button';
-    button.setAttribute('aria-label', 'Abrir menu');
-    button.setAttribute('aria-expanded', 'false');
-    button.setAttribute('data-mobile-menu-open', '');
-    button.innerHTML = '<svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
-    nav.appendChild(button);
+  nav.className = 'site-nav unified-nav';
+  nav.setAttribute('aria-label', 'Navegação principal');
+  nav.innerHTML = `
+    <a href="index.html" class="brand" aria-label="Psicologia Real - início">Psicologia <span>Real</span></a>
+    <div class="nav-links" aria-label="Menu principal">
+      <a href="terapia.html">Terapia</a>
+      <a href="ansiedade.html">Ansiedade</a>
+      <a href="supervisao.html">Supervisão</a>
+      <a href="corporativo.html">Corporativo</a>
+      <a href="https://psireal.com.br/" target="_blank" rel="noopener">PsiReal Clínica</a>
+      <a class="nav-cta" href="${whatsapp}" target="_blank" rel="noopener">Agendar</a>
+    </div>
+  `;
 
-    const menu = document.createElement('aside');
-    menu.className = 'mobile-menu';
-    menu.setAttribute('data-mobile-menu', '');
-    menu.setAttribute('aria-label', 'Menu movel');
-    menu.innerHTML = `
-      <button class="mobile-menu-backdrop" type="button" aria-label="Fechar menu" data-mobile-menu-close></button>
-      <div class="mobile-menu-panel">
-        <div class="mobile-menu-head">
-          <span class="mobile-menu-kicker">Navegar</span>
-          <button class="mobile-menu-close" type="button" aria-label="Fechar menu" data-mobile-menu-close>
-            <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
-          </button>
-        </div>
-        <div class="mobile-menu-groups">
-          <div class="mobile-menu-group">
-            <strong>Para pacientes</strong>
-            <a href="index.html#terapia">Terapia <span>clinica</span></a>
-            <a href="ansiedade.html">Ansiedade <span>guia</span></a>
-            <a href="index.html#processo">Processo <span>como funciona</span></a>
-            <a href="index.html#sobre">Sobre <span>quem atende</span></a>
-          </div>
-          <div class="mobile-menu-group">
-            <strong>Para psis</strong>
-            <a href="supervisao.html">Supervisao <span>clinica</span></a>
-            <a href="https://psireal.com.br/">PsiReal Clínica <span>plataforma</span></a>
-            <a href="https://psireal.com.br/biblioteca-tcc/index.html">Biblioteca PsiReal <span>recursos</span></a>
-          </div>
-          <div class="mobile-menu-group">
-            <strong>Para empresas</strong>
-            <a href="corporativo.html">Corporativo <span>palestras</span></a>
-          </div>
-        </div>
-        <a class="mobile-menu-cta" href="https://wa.me/5511947388423" target="_blank" rel="noopener">Agendar conversa</a>
+  const button = document.createElement('button');
+  button.className = 'mobile-menu-toggle';
+  button.type = 'button';
+  button.setAttribute('aria-label', 'Abrir menu');
+  button.setAttribute('aria-expanded', 'false');
+  button.setAttribute('data-mobile-menu-open', '');
+  button.innerHTML = '<svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
+  nav.appendChild(button);
+
+  const menu = document.createElement('aside');
+  menu.className = 'mobile-menu';
+  menu.setAttribute('data-mobile-menu', '');
+  menu.setAttribute('aria-label', 'Menu móvel');
+  menu.innerHTML = `
+    <button class="mobile-menu-backdrop" type="button" aria-label="Fechar menu" data-mobile-menu-close></button>
+    <div class="mobile-menu-panel">
+      <div class="mobile-menu-head">
+        <span class="mobile-menu-kicker">Menu</span>
+        <button class="mobile-menu-close" type="button" aria-label="Fechar menu" data-mobile-menu-close>
+          <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
       </div>
-    `;
-    document.body.appendChild(menu);
-  }
+      <div class="mobile-menu-groups">
+        <div class="mobile-menu-group">
+          <strong>Atendimento</strong>
+          <a href="terapia.html">Terapia <span>clínica</span></a>
+          <a href="ansiedade.html">Ansiedade <span>guia</span></a>
+          <a href="index.html#processo">Processo <span>como funciona</span></a>
+          <a href="index.html#sobre">Sobre <span>Michelle</span></a>
+        </div>
+        <div class="mobile-menu-group">
+          <strong>Profissionais e empresas</strong>
+          <a href="supervisao.html">Supervisão <span>TCC</span></a>
+          <a href="corporativo.html">Corporativo <span>empresas</span></a>
+          <a href="https://psireal.com.br/" target="_blank" rel="noopener">PsiReal Clínica <span>plataforma</span></a>
+          <a href="https://psireal.com.br/biblioteca-tcc/index.html" target="_blank" rel="noopener">Biblioteca PsiReal <span>materiais</span></a>
+        </div>
+      </div>
+      <a class="mobile-menu-cta" href="${whatsapp}" target="_blank" rel="noopener">Agendar conversa</a>
+    </div>
+  `;
+  document.body.appendChild(menu);
 
-  const menu = document.querySelector('[data-mobile-menu]');
   const openButton = document.querySelector('[data-mobile-menu-open]');
   const closeButtons = document.querySelectorAll('[data-mobile-menu-close]');
-
-  if (!menu || !openButton) return;
 
   const setOpen = (isOpen) => {
     menu.classList.toggle('is-open', isOpen);
@@ -64,7 +75,7 @@
   };
 
   openButton.addEventListener('click', () => setOpen(true));
-  closeButtons.forEach((button) => button.addEventListener('click', () => setOpen(false)));
+  closeButtons.forEach((closeButton) => closeButton.addEventListener('click', () => setOpen(false)));
   menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setOpen(false)));
   window.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') setOpen(false);
