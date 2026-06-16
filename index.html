@@ -767,6 +767,309 @@
     }
   </style>
   <link rel="stylesheet" href="brand-refresh.css?v=20260518-4" />
+  <style id="modern-home-refresh">
+    :root,
+    body {
+      --paper: #f8fafc;
+      --paper-deep: #edf3f6;
+      --ink: #251f25;
+      --muted: #625b68;
+      --soft: #8c8496;
+      --line: #e6e2ee;
+      --wine: #4a2730;
+      --wine-2: #6d4350;
+      --rose: #8b7bab;
+      --brown: #3d3038;
+      --white: #ffffff;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --border: #e6e2ee;
+      --r2: #8b7bab;
+      --serif: 'Instrument Serif', Georgia, serif;
+      --sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    body {
+      padding-left: 0 !important;
+      background:
+        radial-gradient(circle at 88% 10%, rgba(139,123,171,.18), transparent 32%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 54%, #eef4f7 100%) !important;
+      font-family: var(--sans) !important;
+      color: var(--ink) !important;
+    }
+
+    .desktop-sidebar { display: none !important; }
+
+    .site-nav {
+      left: 0 !important;
+      height: 76px !important;
+      padding: 0 clamp(20px, 5vw, 72px) !important;
+      background: rgba(255,255,255,.82) !important;
+      border-bottom: 1px solid rgba(230,226,238,.78) !important;
+      backdrop-filter: blur(22px) saturate(160%) !important;
+    }
+
+    .brand {
+      min-width: auto !important;
+      font-family: var(--sans) !important;
+      font-size: 18px !important;
+      font-weight: 500 !important;
+      letter-spacing: -.02em !important;
+      color: var(--ink) !important;
+    }
+
+    .brand::before {
+      width: 46px !important;
+      height: 46px !important;
+      flex-basis: 46px !important;
+      background-color: #fff !important;
+      box-shadow: 0 10px 30px rgba(37,31,37,.08) !important;
+    }
+
+    .brand span { color: var(--rose) !important; }
+
+    .nav-links { gap: 18px !important; }
+
+    .desktop-menu-trigger,
+    .nav-links a:not(.nav-cta) {
+      color: var(--muted) !important;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0 !important;
+      text-transform: none !important;
+    }
+
+    .nav-cta,
+    .button-primary,
+    .button-secondary {
+      min-height: 48px !important;
+      border-radius: 14px !important;
+      padding: 0 22px !important;
+      font-size: 13px !important;
+      font-weight: 800 !important;
+      letter-spacing: .02em !important;
+      text-transform: none !important;
+    }
+
+    .nav-cta,
+    .button-primary {
+      border-color: var(--wine) !important;
+      background: var(--wine) !important;
+      color: #fff !important;
+      box-shadow: 0 16px 36px rgba(74,39,48,.16) !important;
+    }
+
+    .button-secondary {
+      border-color: var(--line) !important;
+      background: rgba(255,255,255,.78) !important;
+      color: var(--ink) !important;
+    }
+
+    .hero {
+      min-height: 100svh !important;
+      padding: 112px 0 54px !important;
+      align-items: center !important;
+      background:
+        radial-gradient(circle at 72% 28%, rgba(139,123,171,.18), transparent 26%),
+        linear-gradient(135deg, #ffffff 0%, #f8fafc 52%, #edf3f6 100%) !important;
+    }
+
+    .hero-grid {
+      grid-template-columns: minmax(0, .92fr) minmax(360px, .72fr) !important;
+      gap: clamp(34px, 5vw, 74px) !important;
+      align-items: center !important;
+      min-height: calc(100svh - 166px) !important;
+    }
+
+    .hero-copy { padding: 28px 0 !important; }
+
+    .hero-kicker {
+      display: inline-flex !important;
+      width: fit-content !important;
+      margin-bottom: 24px !important;
+      padding: 8px 14px !important;
+      border: 1px solid var(--line) !important;
+      border-radius: 999px !important;
+      background: rgba(255,255,255,.76) !important;
+      color: var(--wine) !important;
+      font-size: 12px !important;
+      font-weight: 800 !important;
+      letter-spacing: .06em !important;
+      text-transform: uppercase !important;
+    }
+
+    .hero h1 {
+      max-width: 690px !important;
+      font-family: var(--sans) !important;
+      font-size: clamp(44px, 5.6vw, 78px) !important;
+      font-weight: 800 !important;
+      line-height: 1.01 !important;
+      letter-spacing: -.04em !important;
+      color: var(--ink) !important;
+    }
+
+    .hero h1 em {
+      color: var(--rose) !important;
+      font-family: inherit !important;
+      font-style: normal !important;
+    }
+
+    .hero-sub {
+      max-width: 560px !important;
+      margin-top: 24px !important;
+      color: var(--muted) !important;
+      font-size: clamp(17px, 1.4vw, 20px) !important;
+      line-height: 1.62 !important;
+    }
+
+    .hero-actions {
+      gap: 12px !important;
+      margin-top: 30px !important;
+    }
+
+    .hero-note {
+      width: fit-content !important;
+      margin-top: 20px !important;
+      padding: 9px 12px !important;
+      border: 1px solid var(--line) !important;
+      border-radius: 999px !important;
+      background: rgba(255,255,255,.7) !important;
+      color: var(--soft) !important;
+      font-size: 12px !important;
+      letter-spacing: 0 !important;
+      text-transform: none !important;
+    }
+
+    .mobile-paths {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 10px !important;
+      margin-top: 22px !important;
+    }
+
+    .mobile-paths a {
+      min-height: auto !important;
+      padding: 10px 14px !important;
+      border-radius: 999px !important;
+      background: rgba(255,255,255,.72) !important;
+    }
+
+    .mobile-paths span { display: none !important; }
+
+    .mobile-paths strong {
+      font-family: var(--sans) !important;
+      font-size: 13px !important;
+      font-weight: 800 !important;
+      line-height: 1 !important;
+    }
+
+    .hero-media {
+      min-height: 0 !important;
+      align-self: center !important;
+    }
+
+    .portrait-frame {
+      height: min(64svh, 640px) !important;
+      min-height: 460px !important;
+      border-radius: 30px !important;
+      background: #dfe8ec !important;
+      box-shadow: 0 28px 70px rgba(37,31,37,.16) !important;
+    }
+
+    .portrait-frame::after {
+      background: linear-gradient(180deg, rgba(37,31,37,0) 42%, rgba(37,31,37,.32)) !important;
+    }
+
+    .portrait-frame img {
+      filter: saturate(1.02) contrast(.98) brightness(1.02) !important;
+      object-position: center 16% !important;
+    }
+
+    .portrait-caption {
+      left: 22px !important;
+      right: 22px !important;
+      bottom: 20px !important;
+      color: rgba(255,255,255,.9) !important;
+      letter-spacing: .06em !important;
+    }
+
+    .hero-index {
+      top: 22px !important;
+      left: 22px !important;
+      width: auto !important;
+      max-width: 168px !important;
+      padding: 14px 16px !important;
+      border: 1px solid rgba(255,255,255,.7) !important;
+      border-radius: 18px !important;
+      background: rgba(255,255,255,.84) !important;
+      color: var(--muted) !important;
+      box-shadow: 0 18px 40px rgba(37,31,37,.12) !important;
+      backdrop-filter: blur(14px) !important;
+    }
+
+    .hero-index strong {
+      margin-bottom: 3px !important;
+      font-family: var(--sans) !important;
+      color: var(--wine) !important;
+      font-size: 28px !important;
+      font-weight: 800 !important;
+    }
+
+    .hero-index span {
+      display: block !important;
+      font-size: 11px !important;
+      line-height: 1.35 !important;
+      letter-spacing: 0 !important;
+      text-transform: none !important;
+    }
+
+    .service-entry {
+      background: #fff !important;
+      border-color: var(--line) !important;
+    }
+
+    @media (max-width: 980px) {
+      .site-nav { height: 70px !important; }
+      .hero {
+        min-height: auto !important;
+        padding-top: 96px !important;
+      }
+      .hero-grid {
+        grid-template-columns: 1fr !important;
+        min-height: auto !important;
+      }
+      .portrait-frame {
+        height: 520px !important;
+        min-height: 0 !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .brand { font-size: 16px !important; }
+      .brand::before {
+        width: 40px !important;
+        height: 40px !important;
+        flex-basis: 40px !important;
+      }
+      .hero h1 {
+        font-size: clamp(40px, 13vw, 56px) !important;
+        letter-spacing: -.035em !important;
+      }
+      .hero-actions {
+        align-items: stretch !important;
+      }
+      .button-primary,
+      .button-secondary {
+        width: 100% !important;
+      }
+      .portrait-frame { height: 430px !important; }
+      .hero-index { max-width: 150px !important; }
+      .portrait-caption {
+        flex-direction: column !important;
+        gap: 3px !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav class="site-nav" id="siteNav" aria-label="Navegação principal">
@@ -804,8 +1107,8 @@
       <div class="container-wide hero-grid">
         <div class="hero-copy">
           <p class="hero-kicker reveal">Psicoterapia para crianças, adolescentes e adultos</p>
-          <h1 class="reveal delay-1">Talvez <em>carregar tudo</em> tenha ficado pesado demais.</h1>
-          <p class="hero-sub reveal delay-2">Um espaço clínico para ansiedade, sobrecarga emocional, relações difíceis e fases de desenvolvimento que pedem cuidado. Atendimento para crianças, adolescentes e adultos, com método, acolhimento e profundidade.</p>
+          <h1 class="reveal delay-1">Cuidado psicológico para quando <em>está pesado demais.</em></h1>
+          <p class="hero-sub reveal delay-2">Atendimento clínico para ansiedade, sobrecarga emocional, relações difíceis e fases de desenvolvimento que pedem mais apoio.</p>
           <div class="hero-actions reveal delay-3">
             <a class="button-primary" href="https://wa.me/5511947388423?text=Ol%C3%A1%20Michelle%2C%20gostaria%20de%20agendar%20uma%20conversa%20inicial." target="_blank" rel="noopener">Agendar conversa inicial</a>
             <a class="button-secondary" href="terapia.html">Conhecer a terapia</a>

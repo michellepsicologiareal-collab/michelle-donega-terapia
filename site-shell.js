@@ -1,41 +1,7 @@
 ﻿(() => {
   const nav = document.querySelector('.site-nav, body > nav');
-  const navLinks = nav?.querySelector('.nav-links');
-
-  if (navLinks) {
-    navLinks.innerHTML = `
-      <a class="nav-cta" href="https://wa.me/5511947388423" target="_blank" rel="noopener">Agendar</a>
-    `;
-  }
-
-  if (nav && !document.querySelector('[data-desktop-sidebar]')) {
-    document.body.classList.add('has-desktop-sidebar');
-    const sidebar = document.createElement('aside');
-    sidebar.className = 'desktop-sidebar';
-    sidebar.setAttribute('data-desktop-sidebar', '');
-    sidebar.setAttribute('aria-label', 'Navegacao principal');
-    sidebar.innerHTML = `
-      <div class="desktop-sidebar-group">
-        <strong>Para pacientes</strong>
-        <a href="terapia.html"><span>Terapia</span><small>Atendimento clinico</small></a>
-        <a href="ansiedade.html"><span>Ansiedade</span><small>Guia para pacientes</small></a>
-        <a href="index.html#processo"><span>Processo</span><small>Como funciona</small></a>
-        <a href="index.html#sobre"><span>Sobre</span><small>Conheca a psicologa</small></a>
-      </div>
-      <div class="desktop-sidebar-group">
-        <strong>Para psis</strong>
-        <a href="supervisao.html"><span>Supervisao</span><small>Desenvolvimento clinico</small></a>
-        <a href="https://psireal.com.br/"><span>PsiReal Clínica</span><small>Plataforma clínica</small></a>
-        <a href="https://psireal.com.br/biblioteca-tcc/index.html"><span>Biblioteca PsiReal</span><small>Materiais e recursos</small></a>
-      </div>
-      <div class="desktop-sidebar-group">
-        <strong>Para empresas</strong>
-        <a href="corporativo.html"><span>Corporativo</span><small>Palestras e solucoes</small></a>
-      </div>
-      <a class="desktop-sidebar-link" href="index.html#faq">FAQ</a>
-    `;
-    document.body.appendChild(sidebar);
-  }
+  document.body.classList.remove('has-desktop-sidebar');
+  document.querySelector('[data-desktop-sidebar]')?.remove();
 
   if (nav && !document.querySelector('[data-mobile-menu]')) {
     const button = document.createElement('button');
