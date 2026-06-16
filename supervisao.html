@@ -126,6 +126,9 @@
     .btn-primary:hover{transform:translateY(-1px);}
     .btn-ghost{background:transparent;color:rgba(255,255,255,.75);font-size:14px;padding:11px 22px;border-radius:var(--radius-sm);border:1.5px solid rgba(255,255,255,.2);text-decoration:none;transition:border-color .15s,color .15s;}
     .btn-ghost:hover{border-color:rgba(255,255,255,.45);color:#fff;}
+    .editorial-media{max-width:1080px;margin:-42px auto 0;padding:0 2.5rem;position:relative;z-index:2;}
+    .editorial-media figure{margin:0;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 26px 70px rgba(37,31,37,.12);}
+    .editorial-media img{display:block;width:100%;aspect-ratio:16 / 7;object-fit:cover;object-position:center 58%;}
     .stats{display:flex;justify-content:center;flex-wrap:wrap;background:#fff;border-bottom:1px solid var(--border);}
     .stat{text-align:center;padding:1.75rem 3rem;border-right:1px solid var(--border);}
     .stat:last-child{border-right:none;}
@@ -648,6 +651,15 @@
         align-items: stretch !important;
       }
 
+      .editorial-media {
+        margin: -24px auto 0 !important;
+        padding: 0 20px !important;
+      }
+
+      .editorial-media img {
+        aspect-ratio: 4 / 3 !important;
+      }
+
       .stats {
         display: grid !important;
         grid-template-columns: 1fr 1fr !important;
@@ -705,6 +717,9 @@
     </div>
   </div>
 </section>
+<div class="editorial-media" aria-label="Ambiente clínico acolhedor para supervisão">
+  <figure><img src="consultorio-supervisao.jpg" alt="Ambiente clínico acolhedor com poltrona, almofada e luminária" /></figure>
+</div>
 <div class="stats">
   <div class="stat"><div class="stat-n">6+</div><div class="stat-l">Anos de prática clínica</div></div>
   <div class="stat"><div class="stat-n">TCC</div><div class="stat-l">Especialização principal</div></div>
