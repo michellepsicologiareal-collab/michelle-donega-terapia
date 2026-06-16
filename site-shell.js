@@ -9,15 +9,15 @@
   document.querySelector('[data-mobile-menu]')?.remove();
 
   nav.className = 'site-nav unified-nav';
-  nav.setAttribute('aria-label', 'Navegação principal');
+  nav.setAttribute('aria-label', 'Navega\u00e7\u00e3o principal');
   nav.innerHTML = `
-    <a href="index.html" class="brand" aria-label="Psicologia Real - início">Psicologia <span>Real</span></a>
+    <a href="index.html" class="brand" aria-label="Psicologia Real - in\u00edcio">Psicologia <span>Real</span></a>
     <div class="nav-links" aria-label="Menu principal">
       <a href="terapia.html">Terapia</a>
       <a href="ansiedade.html">Ansiedade</a>
-      <a href="supervisao.html">Supervisão</a>
+      <a href="supervisao.html">Supervis\u00e3o</a>
       <a href="corporativo.html">Corporativo</a>
-      <a href="https://psireal.com.br/" target="_blank" rel="noopener">PsiReal Clínica</a>
+      <a href="https://psireal.com.br/" target="_blank" rel="noopener">PsiReal Cl\u00ednica</a>
       <a class="nav-cta" href="${whatsapp}" target="_blank" rel="noopener">Agendar</a>
     </div>
   `;
@@ -34,7 +34,7 @@
   const menu = document.createElement('aside');
   menu.className = 'mobile-menu';
   menu.setAttribute('data-mobile-menu', '');
-  menu.setAttribute('aria-label', 'Menu móvel');
+  menu.setAttribute('aria-label', 'Menu m\u00f3vel');
   menu.innerHTML = `
     <button class="mobile-menu-backdrop" type="button" aria-label="Fechar menu" data-mobile-menu-close></button>
     <div class="mobile-menu-panel">
@@ -47,16 +47,16 @@
       <div class="mobile-menu-groups">
         <div class="mobile-menu-group">
           <strong>Atendimento</strong>
-          <a href="terapia.html">Terapia <span>clínica</span></a>
+          <a href="terapia.html">Terapia <span>cl\u00ednica</span></a>
           <a href="ansiedade.html">Ansiedade <span>guia</span></a>
           <a href="index.html#processo">Processo <span>como funciona</span></a>
           <a href="index.html#sobre">Sobre <span>Michelle</span></a>
         </div>
         <div class="mobile-menu-group">
           <strong>Profissionais e empresas</strong>
-          <a href="supervisao.html">Supervisão <span>TCC</span></a>
+          <a href="supervisao.html">Supervis\u00e3o <span>TCC</span></a>
           <a href="corporativo.html">Corporativo <span>empresas</span></a>
-          <a href="https://psireal.com.br/" target="_blank" rel="noopener">PsiReal Clínica <span>plataforma</span></a>
+          <a href="https://psireal.com.br/" target="_blank" rel="noopener">PsiReal Cl\u00ednica <span>plataforma</span></a>
           <a href="https://psireal.com.br/biblioteca-tcc/index.html" target="_blank" rel="noopener">Biblioteca PsiReal <span>materiais</span></a>
         </div>
       </div>
