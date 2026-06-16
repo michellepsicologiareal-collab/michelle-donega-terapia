@@ -80,4 +80,64 @@
   window.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') setOpen(false);
   });
+
+  const publicFormIds = new Set(['contactForm', 'ansiedadeLeadForm', 'cForm']);
+  const getField = (ids) => {
+    for (const id of ids) {
+      const field = document.getElementById(id);
+      if (field) return field.value.trim();
+    }
+    return '';
+  };
+  const setText = (id, text) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = text;
+  };
+  const show = (id, display = 'block') => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = display;
+  };
+  const hide = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+  };
+
+  document.addEventListener('submit', (event) => {
+    const form = event.target.closest('form');
+    if (!form || !publicFormIds.has(form.id)) return;
+
+    event.preventDefault();
+    event.stopImmediatePropagation();
+
+    const nome = getField(['nome', 'fNome', 'ansNome']);
+    const servico = getField(['servico', 'fServ', 'ansServico']) || 'Conversa inicial';
+    const mensagem = getField(['mensagem', 'fMsg', 'ansMsg']);
+    const pagina = document.title ? `\nPagina: ${document.title}` : '';
+    const text = encodeURIComponent(
+      `Ola Michelle! Me chamo ${nome || 'nao informado'}.\n` +
+      `Tenho interesse em: ${servico}.` +
+      (mensagem ? `\n\nMensagem: ${mensagem}` : '') +
+      pagina
+    );
+
+    hide('formError');
+    hide('ansErr');
+    const feedback = document.getElementById('fFeedback');
+    if (feedback) {
+      feedback.className = 'form-feedback ok';
+      feedback.style.display = 'block';
+      feedback.textContent = 'Abrindo WhatsApp para continuar a conversa.';
+    }
+    show('formSuccess');
+    show('ansOk');
+    setText('formBtnText', 'Abrindo WhatsApp...');
+    setText('fBtn', 'Abrindo WhatsApp...');
+
+    window.open(`https://wa.me/5511947388423?text=${text}`, '_blank', 'noopener');
+    setTimeout(() => {
+      form.reset();
+      setText('formBtnText', 'Enviar mensagem');
+      setText('fBtn', 'Enviar mensagem');
+    }, 300);
+  }, true);
 })();
