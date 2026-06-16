@@ -1,4 +1,4 @@
-﻿const CACHE = 'psireal-v3-20260519';
+const CACHE = 'psireal-v6-20260616-links';
 const ASSETS = [
   '/',
   '/index.html',

@@ -18,6 +18,7 @@
       <a href="supervisao.html">Supervis\u00e3o</a>
       <a href="corporativo.html">Corporativo</a>
       <a href="https://psireal.com.br/" target="_blank" rel="noopener">PsiReal Cl\u00ednica</a>
+      <a href="https://psireal.com.br/biblioteca-tcc/index.html" target="_blank" rel="noopener">Biblioteca</a>
       <a class="nav-cta" href="${whatsapp}" target="_blank" rel="noopener">Agendar</a>
     </div>
   `;
