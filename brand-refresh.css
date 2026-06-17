@@ -1105,3 +1105,198 @@ body > nav.unified-nav {
     margin-top: -38px !important;
   }
 }
+
+/* 2026-06-17: ajustes finais de centro, foto e cards */
+body.home .hero-grid,
+.hero .hero-grid {
+  width: min(720px, calc(100% - 36px)) !important;
+  max-width: 720px !important;
+  min-height: 0 !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  justify-items: center !important;
+  gap: 0 !important;
+  text-align: center !important;
+}
+
+body.home .hero-copy,
+.hero .hero-copy {
+  width: min(640px, 100%) !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: grid !important;
+  justify-items: center !important;
+  text-align: center !important;
+}
+
+body.home .hero-media,
+.hero .hero-media {
+  display: none !important;
+}
+
+body.home .hero-kicker,
+.hero .hero-kicker {
+  margin-right: auto !important;
+  margin-left: auto !important;
+  justify-self: center !important;
+}
+
+body.home .hero h1,
+.hero-copy h1 {
+  max-width: 650px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  text-align: center !important;
+}
+
+body.home .hero-sub,
+.hero-copy .hero-sub {
+  max-width: 500px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  text-align: center !important;
+}
+
+body.home .hero-actions,
+.hero-copy .hero-actions,
+body.home .service-links {
+  justify-content: center !important;
+  justify-self: center !important;
+}
+
+body.home .hero-note {
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  justify-self: center !important;
+}
+
+.terapia-photo-figure {
+  width: min(760px, calc(100% - 32px)) !important;
+  max-width: 760px !important;
+  margin: 0 auto !important;
+  overflow: hidden !important;
+  border-radius: 8px !important;
+  background: #f8f6f2 !important;
+}
+
+.terapia-photo-figure img {
+  width: 100% !important;
+  max-height: 820px !important;
+  aspect-ratio: 4 / 5 !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+}
+
+.serv-grid {
+  width: min(980px, calc(100% - 32px)) !important;
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  align-items: stretch !important;
+}
+
+.serv-card,
+.serv-card.featured {
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+}
+
+.serv-card.featured {
+  grid-column: 1 / -1 !important;
+  width: min(760px, 100%) !important;
+  justify-self: center !important;
+}
+
+.serv-thumb,
+.serv-thumb-light {
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 18px 28px 0 !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  background: transparent !important;
+}
+
+.serv-thumb svg {
+  display: none !important;
+}
+
+.serv-badge,
+.serv-badge.soft {
+  position: static !important;
+  inset: auto !important;
+  color: var(--ink) !important;
+  background: rgba(255,255,255,.82) !important;
+  border: 1px solid var(--line) !important;
+}
+
+.serv-body {
+  padding: 18px 28px 26px !important;
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+}
+
+.serv-title,
+.serv-desc,
+.serv-tags,
+.serv-footer {
+  max-width: 640px !important;
+}
+
+.serv-footer {
+  margin-top: auto !important;
+  align-items: center !important;
+}
+
+.serv-cta {
+  color: var(--wine) !important;
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+}
+
+.serv-card:hover .serv-cta {
+  color: var(--wine) !important;
+  background: transparent !important;
+  transform: none !important;
+}
+
+@media (max-width: 860px) {
+  body.home .hero-grid,
+  .hero .hero-grid {
+    width: min(100% - 28px, 620px) !important;
+  }
+
+  body.home .hero-actions,
+  .hero-copy .hero-actions {
+    width: 100% !important;
+  }
+
+  .terapia-photo-figure {
+    width: min(100% - 24px, 520px) !important;
+  }
+
+  .terapia-photo-figure img {
+    aspect-ratio: 3 / 4 !important;
+    max-height: none !important;
+  }
+
+  .serv-grid {
+    width: min(100% - 28px, 560px) !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .serv-card.featured {
+    width: 100% !important;
+  }
+}
