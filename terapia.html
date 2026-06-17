@@ -698,7 +698,7 @@ async function sendForm(e) {
         const msg = encodeURIComponent(
           'Olá Michelle! Me chamo ' + payload.nome + '.\n' +
           'Tenho interesse em: ' + payload.servico + '.' +
-          (payload.mensagem  '\n\n' + payload.mensagem : '')
+          (payload.mensagem ? '\n\n' + payload.mensagem : '')
         );
         setTimeout(() => window.open('https://wa.me/5511947388423?text=' + msg, '_blank'), 900);
       } else {

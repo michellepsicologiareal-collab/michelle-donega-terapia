@@ -564,7 +564,7 @@
       if(!res.ok) throw new Error('falha');
       document.getElementById('ansOk').style.display='block';
       document.getElementById('ansErr').style.display='none';
-      const msg = encodeURIComponent('Olá Michelle! Me chamo ' + payload.nome + '.\nTenho interesse em: ' + payload.servico + '.' + (payload.mensagem  '\n\n' + payload.mensagem : ''));
+      const msg = encodeURIComponent('Olá Michelle! Me chamo ' + payload.nome + '.\nTenho interesse em: ' + payload.servico + '.' + (payload.mensagem ? '\n\n' + payload.mensagem : ''));
       setTimeout(()=>window.open('https://wa.me/5511947388423?text=' + msg,'_blank'),600);
     } catch (err) {
       document.getElementById('ansErr').style.display='block';
