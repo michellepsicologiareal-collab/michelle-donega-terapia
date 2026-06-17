@@ -802,3 +802,306 @@ footer .footer-logo {
   justify-items: center !important;
   gap: 2px !important;
 }
+
+/* 2026-06-17: layout unificado das abas, com Terapia como referência */
+html,
+body {
+  font-family: "DM Sans", "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  background: #faf8f5 !important;
+  color: var(--ink) !important;
+  letter-spacing: 0 !important;
+}
+
+h1,
+h2,
+h3,
+.section-title,
+.contact-text h2,
+.schema-head h2 {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+}
+
+h1 em,
+h2 em,
+h3 em,
+.hero-wrap h1 em,
+.hero h1 em {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  color: var(--r2) !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+}
+
+.site-nav.unified-nav,
+body > nav.unified-nav {
+  height: 78px !important;
+  background: rgba(255,255,255,.92) !important;
+  border-top: 8px solid #3d2030 !important;
+  border-bottom: 1px solid rgba(224,217,229,.86) !important;
+}
+
+.unified-nav .brand {
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.unified-nav .brand::before {
+  content: "" !important;
+}
+
+.unified-nav .nav-links a:not(.nav-cta) {
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #6f625d !important;
+}
+
+.unified-nav .nav-cta,
+.hero-actions a,
+.btn-hero,
+.btn-corp,
+.button-primary,
+.btn-form {
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  border-radius: 10px !important;
+}
+
+.hero-wrap,
+.hero {
+  min-height: 530px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: clamp(92px, 12vh, 136px) 24px 72px !important;
+  background:
+    radial-gradient(circle at 70% 28%, rgba(139,123,171,.16), transparent 32%),
+    linear-gradient(180deg, #fff 0%, #fbfaf8 58%, #f6f3ef 100%) !important;
+  color: var(--ink) !important;
+  text-align: center !important;
+  overflow: visible !important;
+}
+
+.hero-wrap::before,
+.hero-wrap::after,
+.hero::before,
+.hero::after {
+  display: none !important;
+}
+
+.hero-inner,
+.hero-left,
+.hero .hero-inner {
+  width: min(680px, 100%) !important;
+  max-width: 680px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  position: relative !important;
+  z-index: 2 !important;
+  display: grid !important;
+  justify-items: center !important;
+}
+
+.hero-right,
+.hero-media,
+.hero-diferenciais,
+.hero-right-foot {
+  display: none !important;
+}
+
+.hero-tag,
+.hero-badge,
+.hero-kicker {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: fit-content !important;
+  margin: 0 auto 28px !important;
+  padding: 7px 16px !important;
+  border: 1px solid rgba(139,123,171,.24) !important;
+  border-radius: 999px !important;
+  background: rgba(240,237,248,.82) !important;
+  color: #6f625d !important;
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: .14em !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+}
+
+.hero-tag::before,
+.hero-badge::before {
+  content: "" !important;
+  width: 6px !important;
+  height: 6px !important;
+  flex: 0 0 6px !important;
+  border-radius: 999px !important;
+  background: var(--r2) !important;
+  animation: none !important;
+}
+
+.hero-wrap h1,
+.hero h1 {
+  max-width: 620px !important;
+  margin: 0 auto 24px !important;
+  color: var(--ink) !important;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-size: clamp(42px, 5.2vw, 62px) !important;
+  font-weight: 500 !important;
+  line-height: .98 !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+}
+
+.hero-sub,
+.hero-wrap .hero-sub,
+.hero .hero-sub,
+.hero-left p {
+  max-width: 500px !important;
+  margin: 0 auto 30px !important;
+  color: #908680 !important;
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.75 !important;
+  text-align: center !important;
+}
+
+.hero-actions {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  margin: 0 auto !important;
+}
+
+.hero-actions a,
+.btn-hero,
+.btn-corp,
+.btn-ghost-dark {
+  min-height: 48px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 24px !important;
+  border-radius: 10px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+.hero-actions a:first-child,
+.btn-hero:not(.secondary),
+.btn-corp {
+  border: 1px solid var(--wine) !important;
+  background: var(--grad) !important;
+  color: #fff !important;
+  box-shadow: 0 18px 36px rgba(92,61,46,.16) !important;
+}
+
+.hero-actions a:nth-child(2),
+.btn-hero.secondary,
+.btn-ghost-dark {
+  border: 1px solid var(--line) !important;
+  background: rgba(255,255,255,.76) !important;
+  color: #80756f !important;
+}
+
+.anxiety-map,
+.mobile-paths {
+  max-width: 720px !important;
+  margin: -54px auto 56px !important;
+  padding: 0 24px !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+}
+
+.map-card,
+.mobile-paths a {
+  min-height: 0 !important;
+  padding: 9px 18px !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,.78) !important;
+  box-shadow: none !important;
+}
+
+.map-card span,
+.map-card p,
+.mobile-paths span {
+  display: none !important;
+}
+
+.map-card strong,
+.mobile-paths strong,
+.mobile-paths a {
+  margin: 0 !important;
+  color: var(--ink) !important;
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+}
+
+.editorial-band {
+  margin-top: 0 !important;
+  background: #f8f6f2 !important;
+  border-top: 1px solid var(--line) !important;
+}
+
+.editorial-band figure,
+.hero-photo-wrap,
+.wide-photo,
+.photo-card {
+  border-radius: 8px !important;
+}
+
+@media (max-width: 860px) {
+  .site-nav.unified-nav,
+  body > nav.unified-nav {
+    height: 70px !important;
+    border-top-width: 6px !important;
+  }
+
+  .hero-wrap,
+  .hero {
+    min-height: 520px !important;
+    padding: 94px 18px 58px !important;
+  }
+
+  .hero-wrap h1,
+  .hero h1 {
+    font-size: clamp(36px, 12vw, 48px) !important;
+  }
+
+  .hero-sub,
+  .hero-wrap .hero-sub,
+  .hero .hero-sub,
+  .hero-left p {
+    font-size: 14px !important;
+  }
+
+  .hero-actions {
+    width: 100% !important;
+  }
+
+  .hero-actions a,
+  .btn-hero,
+  .btn-corp,
+  .btn-ghost-dark {
+    width: min(100%, 320px) !important;
+  }
+
+  .anxiety-map,
+  .mobile-paths {
+    margin-top: -38px !important;
+  }
+}
