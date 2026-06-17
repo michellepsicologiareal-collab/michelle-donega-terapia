@@ -1,12 +1,12 @@
-const CACHE = 'psireal-v6-20260616-links';
+﻿const CACHE = 'psireal-v3-20260519';
 const ASSETS = [
   '/',
   '/index.html',
   '/terapia.html',
   '/supervisao.html',
   '/corporativo.html',
-  '/https://psireal.com.br/painel-tcc.html',
-  '/https://psireal.com.br/',
+  '/admin-contatos.html',
+  '/formulario-esquemas.html',
   '/manifest.json'
 ];
 
