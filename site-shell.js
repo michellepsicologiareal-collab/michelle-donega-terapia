@@ -71,7 +71,7 @@
 
   const setOpen = (isOpen) => {
     menu.classList.toggle('is-open', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+    document.body.style.overflow = isOpen  'hidden' : '';
     openButton.setAttribute('aria-expanded', String(isOpen));
   };
 
@@ -113,11 +113,11 @@
     const nome = getField(['nome', 'fNome', 'ansNome']);
     const servico = getField(['servico', 'fServ', 'ansServico']) || 'Conversa inicial';
     const mensagem = getField(['mensagem', 'fMsg', 'ansMsg']);
-    const pagina = document.title ? `\nPagina: ${document.title}` : '';
+    const pagina = document.title  `\nPagina: ${document.title}` : '';
     const text = encodeURIComponent(
       `Ola Michelle! Me chamo ${nome || 'nao informado'}.\n` +
       `Tenho interesse em: ${servico}.` +
-      (mensagem ? `\n\nMensagem: ${mensagem}` : '') +
+      (mensagem  `\n\nMensagem: ${mensagem}` : '') +
       pagina
     );
 
