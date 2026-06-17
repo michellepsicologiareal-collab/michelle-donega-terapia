@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /https://psireal.com.br/painel-tcc.html
+Disallow: /https://psireal.com.br/
 
-Sitemap: https://psireal.com.br/sitemap.xml
+Sitemap: https://michelledonegaterapia.com.br/sitemap.xml
