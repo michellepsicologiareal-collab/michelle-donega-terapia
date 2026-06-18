@@ -1662,3 +1662,245 @@ body.corporativo-page .serv-thumb.serv-photo .serv-badge.soft {
   }
 }
 
+/* 2026-06-17: fotos dos servicos na home */
+body.home .service-entry {
+  background: #fff !important;
+  border-top: 1px solid var(--line) !important;
+  border-bottom: 1px solid var(--line) !important;
+  padding: 34px 0 !important;
+}
+
+body.home .service-grid {
+  width: min(1180px, calc(100% - 40px)) !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+}
+
+body.home .service-photo-link {
+  min-height: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  text-align: left !important;
+  box-shadow: 0 12px 28px rgba(74,35,48,.06) !important;
+}
+
+body.home .service-photo-link + .service-photo-link {
+  border-left: 1px solid var(--line) !important;
+}
+
+body.home .service-photo-link figure {
+  width: 100% !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  background: #f8f6f2 !important;
+  aspect-ratio: 4 / 3 !important;
+}
+
+body.home .service-photo-link img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+}
+
+body.home .service-photo-link:nth-child(1) img {
+  object-position: center 52% !important;
+}
+
+body.home .service-photo-link:nth-child(2) img {
+  object-position: center 30% !important;
+}
+
+body.home .service-photo-link:nth-child(3) img {
+  object-position: center center !important;
+}
+
+body.home .service-photo-link:nth-child(4) img {
+  object-position: center 48% !important;
+}
+
+body.home .service-photo-link span,
+body.home .service-photo-link strong,
+body.home .service-photo-link small {
+  margin-right: 18px !important;
+  margin-left: 18px !important;
+}
+
+body.home .service-photo-link span {
+  margin-top: 18px !important;
+  color: var(--r2) !important;
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+}
+
+body.home .service-photo-link strong {
+  margin-top: 6px !important;
+  color: var(--ink) !important;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-size: clamp(28px, 2.4vw, 36px) !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+}
+
+body.home .service-photo-link small {
+  margin-top: 10px !important;
+  margin-bottom: 22px !important;
+  max-width: none !important;
+  color: #908680 !important;
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+}
+
+body.home .service-photo-link:hover {
+  background: #fff !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 18px 36px rgba(74,35,48,.10) !important;
+}
+
+@media (max-width: 980px) {
+  body.home .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 620px) {
+  body.home .service-entry {
+    padding: 22px 0 !important;
+  }
+
+  body.home .service-grid {
+    width: min(100% - 28px, 520px) !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  body.home .service-photo-link figure {
+    aspect-ratio: 16 / 10 !important;
+  }
+}
+
+/* 2026-06-17: ajuste final - foto da home e formulario corporativo mobile */
+body.home .hero {
+  overflow: visible !important;
+}
+
+body.home .hero .hero-media {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+body.home .hero .portrait-frame {
+  background: #f7f2ef !important;
+  box-shadow: 0 22px 70px rgba(75, 38, 48, .14) !important;
+}
+
+body.home .hero .portrait-frame img[src*="michelle-hero-arvore"] {
+  object-fit: cover !important;
+  object-position: center 28% !important;
+}
+
+@media (max-width: 980px) {
+  body.home .hero .hero-media {
+    display: flex !important;
+    order: 2 !important;
+    margin: 0 auto !important;
+  }
+
+  body.home .hero .portrait-frame {
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 4 / 5 !important;
+  }
+
+  body.home .hero .portrait-frame img[src*="michelle-hero-arvore"] {
+    object-position: center 24% !important;
+  }
+}
+
+@media (max-width: 720px) {
+  body.home .hero .hero-grid {
+    width: min(100% - 24px, 520px) !important;
+  }
+
+  body.home .hero .portrait-frame {
+    border-radius: 18px !important;
+    aspect-ratio: 3 / 4 !important;
+  }
+}
+
+@media (max-width: 860px) {
+  body.corporativo-page .contact-section {
+    padding: 52px 16px !important;
+    overflow: hidden !important;
+  }
+
+  body.corporativo-page .contact-inner {
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 0 !important;
+  }
+
+  body.corporativo-page .contact-text,
+  body.corporativo-page .form-wrap,
+  body.corporativo-page .contact-form,
+  body.corporativo-page #cForm {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  body.corporativo-page .form-wrap {
+    padding: 22px 16px !important;
+    border-radius: 16px !important;
+  }
+
+  body.corporativo-page .form-row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  body.corporativo-page .form-group {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  body.corporativo-page .form-group input,
+  body.corporativo-page .form-group select,
+  body.corporativo-page .form-group textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    font-size: 16px !important;
+  }
+
+  body.corporativo-page .btn-form {
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+}
+
+/* 2026-06-17: foto especifica do workshop corporativo */
+body.corporativo-page .workshop-card .serv-thumb.serv-photo img {
+  object-position: center center !important;
+}
+
