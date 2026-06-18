@@ -508,17 +508,19 @@
       <h2>Quer cuidar da ansiedade com acompanhamento <em>clínico</em>?</h2>
       <p>Envie seus dados e eu retorno para entender seu momento, explicar como funciona o processo e orientar o melhor próximo passo.</p>
     </div>
-    <form class="contact-form" id="ansiedadeLeadForm">
-      <div class="contact-fields">
-        <div><label for="ansNome">Nome</label><input id="ansNome" required/></div>
-        <div><label for="ansWhats">WhatsApp</label><input id="ansWhats" required/></div>
-        <div class="full"><label for="ansServico">Interesse</label><select id="ansServico" required><option value="">Selecione</option><option>Ansiedade</option><option>Terapia para adulto</option><option>Dúvida inicial</option></select></div>
-        <div class="full"><label for="ansMsg">Mensagem</label><textarea id="ansMsg" placeholder="Conte brevemente o que está vivendo."></textarea></div>
-      </div>
-      <button class="contact-btn" type="submit">Quero conversar</button>
-      <div class="contact-msg ok" id="ansOk">Mensagem enviada. Em instantes abriremos o WhatsApp.</div>
-      <div class="contact-msg err" id="ansErr">Não foi possível enviar agora. Tente novamente.</div>
-    </form>
+    <a class="external-form-card" href="https://michellepsicologiareal-collab.github.io/formulario-psicologia/" target="_blank" rel="noopener" aria-label="Abrir formulario Psicologia Real">
+  <span class="external-form-badge">Psicologia Real</span>
+  <strong>Ol&aacute;, seja bem-vindo(a).</strong>
+  <em>Como posso te ajudar?</em>
+  <span class="external-form-caption">Escolha seu perfil no formul&aacute;rio completo e siga pelo caminho certo.</span>
+  <span class="external-form-options" aria-hidden="true">
+    <span class="external-form-option"><span class="external-form-icon">1</span><span><b>Sou paciente ou respons&aacute;vel</b><small>Agendar uma conversa inicial ou saber mais sobre a terapia.</small></span></span>
+    <span class="external-form-option"><span class="external-form-icon">2</span><span><b>Sou psic&oacute;loga(o)</b><small>Supervis&atilde;o cl&iacute;nica, mentoria ou desenvolvimento profissional.</small></span></span>
+    <span class="external-form-option"><span class="external-form-icon">3</span><span><b>Produto digital</b><small>Suporte, d&uacute;vidas de acesso, templates ou sistemas.</small></span></span>
+    <span class="external-form-option"><span class="external-form-icon">4</span><span><b>Contratar palestra</b><small>Sa&uacute;de mental para empresas, escolas ou eventos.</small></span></span>
+  </span>
+  <span class="external-form-button">Abrir formul&aacute;rio completo</span>
+</a>
   </div>
 </section>
 
@@ -538,39 +540,6 @@
 </footer>
 
 <script>
-  const SB_URL = 'https://qpwjxacdjzzsyjbuuwsq.supabase.co';
-  const SB_KEY = 'sb_publishable_hQclCJaEsVjcnGM4WAoYmA_r8H8NqAp';
-  document.getElementById('ansiedadeLeadForm').addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const payload = {
-      nome: document.getElementById('ansNome').value.trim(),
-      whatsapp: document.getElementById('ansWhats').value.trim(),
-      servico: document.getElementById('ansServico').value,
-      mensagem: document.getElementById('ansMsg').value.trim() || null,
-      pagina: 'ansiedade',
-      status: 'novo'
-    };
-    try {
-      const res = await fetch(SB_URL + '/rest/v1/contatos', {
-        method:'POST',
-        headers:{
-          'Content-Type':'application/json',
-          apikey:SB_KEY,
-          Authorization:'Bearer ' + SB_KEY,
-          Prefer:'return=minimal'
-        },
-        body:JSON.stringify(payload)
-      });
-      if(!res.ok) throw new Error('falha');
-      document.getElementById('ansOk').style.display='block';
-      document.getElementById('ansErr').style.display='none';
-      const msg = encodeURIComponent('Olá Michelle! Me chamo ' + payload.nome + '.\nTenho interesse em: ' + payload.servico + '.' + (payload.mensagem ? '\n\n' + payload.mensagem : ''));
-      setTimeout(()=>window.open('https://michellepsicologiareal-collab.github.io/formulario-psicologia/', '_blank'),600);
-    } catch (err) {
-      document.getElementById('ansErr').style.display='block';
-      document.getElementById('ansOk').style.display='none';
-    }
-  });
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js').catch(()=>{});

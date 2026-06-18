@@ -1440,17 +1440,19 @@
           <h2 class="section-title reveal delay-1">Uma primeira conversa, sem pressa e sem <em>compromisso</em>.</h2>
           <p class="section-lead reveal delay-2">Se você sente que chegou a hora de parar de atravessar tudo sozinha, deixe seus dados. O retorno é feito pelo WhatsApp.</p>
         </div>
-        <form id="contactForm" class="reveal delay-2">
-          <div class="form-row">
-            <div class="form-group"><label for="nome">Nome</label><input id="nome" name="nome" type="text" placeholder="Seu nome" required /></div>
-            <div class="form-group"><label for="whatsapp">WhatsApp</label><input id="whatsapp" name="whatsapp" type="tel" placeholder="(11) 99999-0000" required /></div>
-          </div>
-          <div class="form-group"><label for="servico">O que você busca</label><select id="servico" name="servico" required><option value="">Selecione</option><option>Terapia infantil</option><option>Terapia para adolescente</option><option>Terapia para adulto</option><option>Ansiedade</option><option>Orientação parental</option><option>Relacionamentos</option><option>Autocobrança e burnout</option><option>Dúvida inicial</option></select></div>
-          <div class="form-group"><label for="mensagem">Mensagem opcional</label><textarea id="mensagem" name="mensagem" placeholder="Conte brevemente o que está buscando."></textarea></div>
-          <div class="form-message success" id="formSuccess">Mensagem enviada. Em instantes abriremos o WhatsApp para continuar.</div>
-          <div class="form-message error" id="formError">Não foi possível enviar agora. Tente novamente ou use o WhatsApp.</div>
-          <button class="form-button" id="formBtn" type="submit"><span id="formBtnText">Enviar mensagem</span></button>
-        </form>
+        <a class="external-form-card reveal delay-2" href="https://michellepsicologiareal-collab.github.io/formulario-psicologia/" target="_blank" rel="noopener" aria-label="Abrir formulario Psicologia Real">
+  <span class="external-form-badge">Psicologia Real</span>
+  <strong>Ol&aacute;, seja bem-vindo(a).</strong>
+  <em>Como posso te ajudar?</em>
+  <span class="external-form-caption">Escolha seu perfil no formul&aacute;rio completo e siga pelo caminho certo.</span>
+  <span class="external-form-options" aria-hidden="true">
+    <span class="external-form-option"><span class="external-form-icon">1</span><span><b>Sou paciente ou respons&aacute;vel</b><small>Agendar uma conversa inicial ou saber mais sobre a terapia.</small></span></span>
+    <span class="external-form-option"><span class="external-form-icon">2</span><span><b>Sou psic&oacute;loga(o)</b><small>Supervis&atilde;o cl&iacute;nica, mentoria ou desenvolvimento profissional.</small></span></span>
+    <span class="external-form-option"><span class="external-form-icon">3</span><span><b>Produto digital</b><small>Suporte, d&uacute;vidas de acesso, templates ou sistemas.</small></span></span>
+    <span class="external-form-option"><span class="external-form-icon">4</span><span><b>Contratar palestra</b><small>Sa&uacute;de mental para empresas, escolas ou eventos.</small></span></span>
+  </span>
+  <span class="external-form-button">Abrir formul&aacute;rio completo</span>
+</a>
       </div>
     </section>
     <section class="final-cta">
@@ -1503,49 +1505,6 @@
         document.querySelectorAll('.faq-item.open').forEach((openItem) => openItem.classList.remove('open'));
         if (!wasOpen) item.classList.add('open');
       });
-    });
-    const SB_URL = 'https://qpwjxacdjzzsyjbuuwsq.supabase.co';
-    const SB_KEY = 'sb_publishable_hQclCJaEsVjcnGM4WAoYmA_r8H8NqAp';
-    document.getElementById('contactForm').addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const btn = document.getElementById('formBtn');
-      const btnText = document.getElementById('formBtnText');
-      const success = document.getElementById('formSuccess');
-      const error = document.getElementById('formError');
-      const payload = {
-        nome: document.getElementById('nome').value.trim(),
-        whatsapp: document.getElementById('whatsapp').value.trim(),
-        servico: document.getElementById('servico').value,
-        mensagem: document.getElementById('mensagem').value.trim() || null,
-        pagina: 'index-terapia-premium',
-        status: 'novo'
-      };
-      btn.disabled = true;
-      btnText.textContent = 'Enviando...';
-      success.style.display = 'none';
-      error.style.display = 'none';
-      try {
-        const response = await fetch(SB_URL + '/rest/v1/contatos', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'apikey': SB_KEY,
-            'Authorization': 'Bearer ' + SB_KEY,
-            'Prefer': 'return=minimal'
-          },
-          body: JSON.stringify(payload)
-        });
-        if (!response.ok && response.status !== 201) throw new Error(String(response.status));
-        success.style.display = 'block';
-        document.getElementById('contactForm').reset();
-        const message = encodeURIComponent('Olá Michelle! Me chamo ' + payload.nome + '.\nInteresse: ' + payload.servico + (payload.mensagem ? '\n\n' + payload.mensagem : ''));
-        setTimeout(() => window.open('https://michellepsicologiareal-collab.github.io/formulario-psicologia/', '_blank'), 700);
-      } catch (err) {
-        error.style.display = 'block';
-      } finally {
-        btn.disabled = false;
-        btnText.textContent = 'Enviar mensagem';
-      }
     });
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
