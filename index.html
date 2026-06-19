@@ -4,18 +4,18 @@
   <script>document.documentElement.classList.add('js');</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Michelle Doneg· - PsicÛloga ClÌnica | CrianÁas, Adolescentes e Adultos</title>
-  <meta name="description" content="Psicoterapia baseada em evidÍncias para crianÁas, adolescentes e adultos, com atenÁ„o especial para ansiedade, sobrecarga emocional, relaÁıes e autocobranÁa. Atendimento online e presencial em Jarinu/SP." />
+  <title>Michelle Doneg√° - Psic√≥loga Cl√≠nica | Crian√ßas, Adolescentes e Adultos</title>
+  <meta name="description" content="Psicoterapia baseada em evid√™ncias para crian√ßas, adolescentes e adultos, com aten√ß√£o especial para ansiedade, sobrecarga emocional, rela√ß√µes e autocobran√ßa. Atendimento online e presencial em Jarinu/SP." />
   <link rel="canonical" href="https://michelledonegaterapia.com.br/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:url" content="https://michelledonegaterapia.com.br/" />
-  <meta property="og:title" content="Michelle Doneg· - PsicÛloga ClÌnica" />
-  <meta property="og:description" content="Psicoterapia para crianÁas, adolescentes e adultos, com atenÁ„o especial para ansiedade, sobrecarga emocional e relaÁıes difÌceis." />
+  <meta property="og:title" content="Michelle Doneg√° - Psic√≥loga Cl√≠nica" />
+  <meta property="og:description" content="Psicoterapia para crian√ßas, adolescentes e adultos, com aten√ß√£o especial para ansiedade, sobrecarga emocional e rela√ß√µes dif√≠ceis." />
   <meta property="og:image" content="https://michelledonegaterapia.com.br/michelle-hero-arvore.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Michelle Doneg· - PsicÛloga ClÌnica" />
-  <meta name="twitter:description" content="Psicoterapia para crianÁas, adolescentes e adultos, online e presencial em Jarinu/SP." />
+  <meta name="twitter:title" content="Michelle Doneg√° - Psic√≥loga Cl√≠nica" />
+  <meta name="twitter:description" content="Psicoterapia para crian√ßas, adolescentes e adultos, online e presencial em Jarinu/SP." />
   <meta name="twitter:image" content="https://michelledonegaterapia.com.br/michelle-hero-arvore.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -213,6 +213,7 @@
       padding: 30px clamp(20px, 3vw, 34px);
       text-decoration: none;
       border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
       transition: background .25s ease;
     }
     .service-mark {
@@ -234,7 +235,8 @@
       stroke-linecap: round;
       stroke-linejoin: round;
     }
-    .service-link:last-child { border-right: 0; }
+    .service-link:nth-child(3n) { border-right: 0; }
+    .service-link:nth-last-child(-n+3) { border-bottom: 0; }
     .service-link span {
       color: var(--rose);
       font-size: 11px;
@@ -453,28 +455,44 @@
     }
     .specialty-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
     }
     .specialty {
-      min-height: 210px;
-      padding: clamp(26px, 3.4vw, 44px);
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      background: rgba(255,253,249,.34);
-      transition: background .25s ease, transform .25s ease;
+      min-height: 100%;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      overflow: hidden;
+      background: rgba(255,253,249,.78);
+      color: inherit;
+      text-decoration: none;
+      box-shadow: 0 22px 60px rgba(79,59,55,.09);
+      transition: background .25s ease, transform .25s ease, box-shadow .25s ease;
     }
-    .specialty:hover { background: var(--white); transform: translateY(-2px); }
+    .specialty:hover { background: var(--white); transform: translateY(-4px); box-shadow: 0 28px 70px rgba(79,59,55,.13); }
+    .specialty figure { height: 210px; overflow: hidden; background: var(--paper-deep); }
+    .specialty img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+    .specialty:hover img { transform: scale(1.035); }
+    .specialty-body { padding: clamp(22px, 2.8vw, 32px); }
     .specialty small {
-      display: block;
-      margin-bottom: 34px;
-      color: var(--rose);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      margin-bottom: 22px;
+      border-radius: 15px;
+      color: var(--wine);
+      background: var(--paper-deep);
+      border: 1px solid var(--line);
       font-family: var(--serif);
-      font-size: 25px;
+      font-size: 24px;
+      line-height: 1;
     }
-    .specialty h3 { color: var(--wine); font-size: 17px; font-weight: 500; }
-    .specialty p { margin-top: 12px; color: var(--muted); font-size: 14.5px; line-height: 1.75; }
+    .specialty h3 { color: var(--wine); font-size: 18px; font-weight: 500; }
+    .specialty p { margin-top: 12px; color: var(--muted); font-size: 14.2px; line-height: 1.72; }
+    .specialty-more { display: inline-block; margin-top: 18px; color: var(--wine); font-size: 13px; font-weight: 600; }
     .difference { background: var(--white); }
     .difference-layout {
       display: grid;
@@ -1155,30 +1173,30 @@
   </style>
 </head>
 <body class="home">
-  <nav class="site-nav" id="siteNav" aria-label="NavegaÁ„o principal">
+  <nav class="site-nav" id="siteNav" aria-label="Navega√ß√£o principal">
     <a href="index.html" class="brand">Psicologia <span>Real</span></a>
     <div class="nav-links">
       <div class="desktop-menu-group">
         <button class="desktop-menu-trigger" type="button">Pacientes <svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
         <div class="desktop-menu-panel">
-          <a href="terapia.html"><strong>Terapia</strong><span>Atendimento clÌnico</span></a>
+          <a href="terapia.html"><strong>Terapia</strong><span>Atendimento cl√≠nico</span></a>
           <a href="ansiedade.html"><strong>Ansiedade</strong><span>Guia para pacientes</span></a>
           <a href="#processo"><strong>Processo</strong><span>Como funciona</span></a>
-          <a href="#sobre"><strong>Sobre</strong><span>ConheÁa a psicÛloga</span></a>
+          <a href="#sobre"><strong>Sobre</strong><span>Conhe√ßa a psic√≥loga</span></a>
         </div>
       </div>
       <div class="desktop-menu-group">
         <button class="desktop-menu-trigger" type="button">Para psis <svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
         <div class="desktop-menu-panel">
-          <a href="supervisao.html"><strong>Supervis„o</strong><span>Desenvolvimento clÌnico</span></a>
-          <a href="https://psireal.com.br/"><strong>PsiReal ClÌnica</strong><span>Plataforma clÌnica</span></a>
+          <a href="supervisao.html"><strong>Supervis√£o</strong><span>Desenvolvimento cl√≠nico</span></a>
+          <a href="https://psireal.com.br/"><strong>PsiReal Cl√≠nica</strong><span>Plataforma cl√≠nica</span></a>
           <a href="https://psireal.com.br/biblioteca-tcc/index.html"><strong>Biblioteca PsiReal</strong><span>Materiais e recursos</span></a>
         </div>
       </div>
       <div class="desktop-menu-group">
         <button class="desktop-menu-trigger" type="button">Empresas <svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
         <div class="desktop-menu-panel">
-          <a href="corporativo.html"><strong>Corporativo</strong><span>Palestras e soluÁıes</span></a>
+          <a href="corporativo.html"><strong>Corporativo</strong><span>Palestras e solu√ß√µes</span></a>
         </div>
       </div>
       <a href="#faq">FAQ</a>
@@ -1189,9 +1207,9 @@
     <section class="hero" id="inicio">
       <div class="container-wide hero-grid">
         <div class="hero-copy">
-          <p class="hero-kicker reveal">Psicoterapia para crianÁas, adolescentes e adultos</p>
-          <h1 class="reveal delay-1">Cuidado psicolÛgico para quando <em>est· pesado demais.</em></h1>
-          <p class="hero-sub reveal delay-2">Atendimento clÌnico para ansiedade, sobrecarga emocional, relaÁıes difÌceis e fases de desenvolvimento que pedem mais apoio.</p>
+          <p class="hero-kicker reveal">Psicoterapia para crian√ßas, adolescentes e adultos</p>
+          <h1 class="reveal delay-1">Cuidado psicol√≥gico para quando <em>est√° pesado demais.</em></h1>
+          <p class="hero-sub reveal delay-2">Atendimento cl√≠nico para ansiedade, sobrecarga emocional, rela√ß√µes dif√≠ceis e fases de desenvolvimento que pedem mais apoio.</p>
           <div class="hero-actions reveal delay-3">
             <a class="button-primary" href="https://michellepsicologiareal-collab.github.io/formulario-psicologia/" target="_blank" rel="noopener">Agendar conversa inicial</a>
             <a class="button-secondary" href="terapia.html">Conhecer a terapia</a>
@@ -1199,45 +1217,57 @@
           <nav class="mobile-paths" aria-label="Atalhos principais">
             <a href="#terapia"><span>Quero</span><strong>Terapia</strong></a>
             <a href="ansiedade.html"><span>Quero entender</span><strong>Ansiedade</strong></a>
-            <a href="supervisao.html"><span>Sou psicÛloga</span><strong>Supervis„o</strong></a>
+            <a href="supervisao.html"><span>Sou psic√≥loga</span><strong>Supervis√£o</strong></a>
             <a href="corporativo.html"><span>Sou empresa</span><strong>Corporativo</strong></a>
           </nav>
           <p class="hero-note reveal delay-3">Presencial em Jarinu/SP - Online para todo o Brasil - CRP 06/93008</p>
         </div>
         <div class="hero-media reveal delay-2">
           <figure class="portrait-frame">
-            <img src="michelle-hero-arvore.jpg?v=20260617" alt="Michelle Doneg· dos Santos diante da frase Que eu seja a minha transformaÁ„o" />
-            <figcaption class="portrait-caption"><span>Michelle Doneg· dos Santos</span><span>PsicÛloga clÌnica</span></figcaption>
+            <img src="michelle-hero-arvore.jpg?v=20260617" alt="Michelle Doneg√° dos Santos diante da frase Que eu seja a minha transforma√ß√£o" />
+            <figcaption class="portrait-caption"><span>Michelle Doneg√° dos Santos</span><span>Psic√≥loga cl√≠nica</span></figcaption>
           </figure>
-          <div class="hero-index" aria-label="ExperiÍncia clÌnica e profissional"><strong>20+</strong><span>anos de experiÍncia humana, clÌnica e corporativa</span></div>
+          <div class="hero-index" aria-label="Experi√™ncia cl√≠nica e profissional"><strong>20+</strong><span>anos de experi√™ncia humana, cl√≠nica e corporativa</span></div>
         </div>
       </div>
     </section>
-    <section class="service-entry" aria-label="Frentes de atuaÁ„o">
+    <section class="service-entry" aria-label="Frentes de atua√ß√£o">
       <div class="service-grid">
-        <a class="service-link service-photo-link" href="terapia.html">
-          <figure><img src="servico-terapia-individual.jpg?v=20260617" alt="Pessoa lendo livro de terapia cognitivo-comportamental" /></figure>
+        <a class="service-link service-photo-link" href="adultos-ansiosos.html">
+          <figure><img src="servico-adultos-ansiosos.jpg?v=20260619" alt="Pessoa adulta em sofrimento emocional com as m√£os no rosto" /></figure>
           <span>Terapia</span>
-          <strong>Individual</strong>
-          <small>Atendimento clÌnico para ansiedade, autocobranÁa, sobrecarga emocional e padrıes que se repetem.</small>
+          <strong>Adultos ansiosos</strong>
+          <small>Preocupa√ß√µes excessivas, crises de ansiedade, autocobran√ßa e sensa√ß√£o de sobrecarga constante.</small>
         </a>
-        <a class="service-link service-photo-link" href="terapia.html">
-          <figure><img src="servico-terapia-infantil.jpg?v=20260617" alt="CrianÁa em momento de calma e cuidado emocional" /></figure>
+        <a class="service-link service-photo-link" href="relacionamentos.html">
+          <figure><img src="servico-relacionamentos.jpg?v=20260619" alt="Duas pessoas de m√£os dadas em gesto de apoio" /></figure>
+          <span>Terapia</span>
+          <strong>Relacionamentos</strong>
+          <small>Limites, depend√™ncia emocional, medo de rejei√ß√£o, conflitos repetitivos e padr√µes afetivos.</small>
+        </a>
+        <a class="service-link service-photo-link" href="burnout-autocobranca.html">
+          <figure><img src="servico-burnout-autocobranca.jpg?v=20260619" alt="Pessoa sobrecarregada cercada por cobran√ßas" /></figure>
+          <span>Terapia</span>
+          <strong>Burnout</strong>
+          <small>Cansa√ßo constante, perfeccionismo, dificuldade de descansar e cobran√ßa interna excessiva.</small>
+        </a>
+        <a class="service-link service-photo-link" href="adolescentes.html">
+          <figure><img src="servico-adolescentes.jpg?v=20260619" alt="Adolescentes olhando para um celular em ambiente externo" /></figure>
+          <span>Terapia</span>
+          <strong>Adolescentes</strong>
+          <small>Ansiedade, autoestima, compara√ß√£o constante, press√£o escolar e conflitos familiares.</small>
+        </a>
+        <a class="service-link service-photo-link" href="ansiedade-infantil.html">
+          <figure><img src="servico-ansiedade-infantil-card.jpg?v=20260619" alt="Crian√ßa pensativa em ambiente dom√©stico" /></figure>
           <span>Terapia</span>
           <strong>Infantil</strong>
-          <small>Cuidado para medos, inseguranÁa, irritabilidade, sono, adaptaÁ„o escolar e orientaÁ„o aos respons·veis.</small>
+          <small>Medos intensos, inseguran√ßa, irritabilidade, sono, separa√ß√£o dos pais e adapta√ß√£o escolar.</small>
         </a>
-        <a class="service-link service-photo-link" href="terapia.html">
-          <figure><img src="servico-terapia-casal.jpg?v=20260617" alt="Casal de m„os dadas representando vÌnculo e cuidado relacional" /></figure>
-          <span>Terapia</span>
-          <strong>Casal</strong>
-          <small>EspaÁo para comunicaÁ„o, limites, vÌnculos, repetiÁ„o de conflitos e reconstruÁ„o de acordos possÌveis.</small>
-        </a>
-        <a class="service-link service-photo-link" href="supervisao.html">
-          <figure><img src="servico-supervisao.jpg?v=20260617" alt="Livro e cafÈ representando estudo clÌnico e supervis„o" /></figure>
-          <span>Para psicÛlogas</span>
-          <strong>Supervis„o</strong>
-          <small>Supervis„o clÌnica em TCC para desenvolver raciocÌnio clÌnico, seguranÁa tÈcnica e conduÁ„o de casos.</small>
+        <a class="service-link service-photo-link" href="orientacao-parental.html">
+          <figure><img src="servico-orientacao-parental.jpg?v=20260619" alt="Casal em conversa de orienta√ß√£o com profissional" /></figure>
+          <span>Fam√≠lia</span>
+          <strong>Orienta√ß√£o parental</strong>
+          <small>Estrat√©gias para compreender comportamentos, fortalecer v√≠nculos e estabelecer limites saud√°veis.</small>
         </a>
       </div>
     </section>
@@ -1252,7 +1282,7 @@
     <section class="editorial-visual">
       <div class="container">
         <figure class="editorial-frame">
-          <img src="therapy-room-editorial.webp" alt="ConsultÛrio em tons suaves" />
+          <img src="therapy-room-editorial.webp" alt="Consult√≥rio em tons suaves" />
         </figure>
       </div>
     </section>
@@ -1261,14 +1291,14 @@
         <div>
           <span class="eyebrow reveal">Quando procurar terapia</span>
           <h2 class="section-title reveal delay-1">Ansiedade nem sempre aparece como <em>crise</em>.</h2>
-          <p class="section-lead reveal delay-2">Em crianÁas, pode surgir como irritaÁ„o, medos, recusa escolar ou dificuldade de dormir. Em adolescentes, como isolamento, autocobranÁa, explosıes ou queda de rendimento. Em adultos, muitas vezes aparece como controle, exaust„o, pensamento acelerado e sensaÁ„o de estar sempre devendo algo.</p>
+          <p class="section-lead reveal delay-2">Em crian√ßas, pode surgir como irrita√ß√£o, medos, recusa escolar ou dificuldade de dormir. Em adolescentes, como isolamento, autocobran√ßa, explos√µes ou queda de rendimento. Em adultos, muitas vezes aparece como controle, exaust√£o, pensamento acelerado e sensa√ß√£o de estar sempre devendo algo.</p>
         </div>
         <div class="symptom-list">
-          <div class="symptom reveal"><span>01</span><div><strong>CrianÁas ansiosas</strong>Medos intensos, inseguranÁa, irritabilidade, dificuldade de separaÁ„o, sono ruim, queixas fÌsicas ou recusa diante de situaÁıes novas.</div></div>
-          <div class="symptom reveal"><span>02</span><div><strong>Adolescentes em sofrimento</strong>AutocobranÁa, comparaÁ„o, isolamento, explosıes emocionais, ansiedade social, baixa autoestima ou sensaÁ„o de n„o dar conta.</div></div>
-          <div class="symptom reveal"><span>03</span><div><strong>Adultos sobrecarregados</strong>Pensamento acelerado, controle, culpa, exaust„o, dificuldade de descansar e a sensaÁ„o constante de que algo pode sair do eixo.</div></div>
-          <div class="symptom reveal"><span>04</span><div><strong>FamÌlias buscando clareza</strong>Quando os respons·veis percebem mudanÁas de comportamento e precisam entender se È fase, ansiedade, adaptaÁ„o ou pedido de ajuda.</div></div>
-          <div class="symptom reveal"><span>05</span><div><strong>RelaÁıes e padrıes emocionais</strong>Limites confusos, medo de decepcionar, dependÍncia emocional, conflitos repetidos e dificuldade de sustentar escolhas prÛprias.</div></div>
+          <div class="symptom reveal"><span>01</span><div><strong>Crian√ßas ansiosas</strong>Medos intensos, inseguran√ßa, irritabilidade, dificuldade de separa√ß√£o, sono ruim, queixas f√≠sicas ou recusa diante de situa√ß√µes novas.</div></div>
+          <div class="symptom reveal"><span>02</span><div><strong>Adolescentes em sofrimento</strong>Autocobran√ßa, compara√ß√£o, isolamento, explos√µes emocionais, ansiedade social, baixa autoestima ou sensa√ß√£o de n√£o dar conta.</div></div>
+          <div class="symptom reveal"><span>03</span><div><strong>Adultos sobrecarregados</strong>Pensamento acelerado, controle, culpa, exaust√£o, dificuldade de descansar e a sensa√ß√£o constante de que algo pode sair do eixo.</div></div>
+          <div class="symptom reveal"><span>04</span><div><strong>Fam√≠lias buscando clareza</strong>Quando os respons√°veis percebem mudan√ßas de comportamento e precisam entender se √© fase, ansiedade, adapta√ß√£o ou pedido de ajuda.</div></div>
+          <div class="symptom reveal"><span>05</span><div><strong>Rela√ß√µes e padr√µes emocionais</strong>Limites confusos, medo de decepcionar, depend√™ncia emocional, conflitos repetidos e dificuldade de sustentar escolhas pr√≥prias.</div></div>
         </div>
       </div>
     </section>
@@ -1277,42 +1307,42 @@
         <div class="process-head">
           <div>
             <span class="eyebrow reveal">Como funciona</span>
-            <h2 class="section-title reveal delay-1">Um processo com escuta, direÁ„o e cuidado <em>real</em>.</h2>
+            <h2 class="section-title reveal delay-1">Um processo com escuta, dire√ß√£o e cuidado <em>real</em>.</h2>
           </div>
-          <p class="section-lead reveal delay-2">A terapia n„o È uma conversa solta. O processo muda conforme a idade e a demanda: com crianÁas, envolve linguagem l˙dica e orientaÁ„o aos respons·veis; com adolescentes, acolhe identidade, press„o social e autonomia; com adultos, aprofunda padrıes emocionais, ansiedade e escolhas.</p>
+          <p class="section-lead reveal delay-2">A terapia n√£o √© uma conversa solta. O processo muda conforme a idade e a demanda: com crian√ßas, envolve linguagem l√∫dica e orienta√ß√£o aos respons√°veis; com adolescentes, acolhe identidade, press√£o social e autonomia; com adultos, aprofunda padr√µes emocionais, ansiedade e escolhas.</p>
         </div>
         <div class="process-list">
-          <div class="process-item reveal"><div class="process-num">01</div><h3>Primeira avaliaÁ„o</h3><p>Entendemos a demanda, a idade, o contexto familiar, escolar, social ou profissional e o que precisa ser cuidado primeiro.</p></div>
-          <div class="process-item reveal"><div class="process-num">02</div><h3>Mapa da ansiedade</h3><p>Investigamos gatilhos, sintomas, pensamentos, comportamentos de evitaÁ„o e padrıes emocionais que mantÍm o sofrimento.</p></div>
-          <div class="process-item reveal"><div class="process-num">03</div><h3>Plano para cada fase</h3><p>CrianÁas, adolescentes e adultos precisam de recursos diferentes. O plano terapÍutico respeita desenvolvimento, linguagem e autonomia.</p></div>
-          <div class="process-item reveal"><div class="process-num">04</div><h3>IntervenÁıes baseadas em evidÍncias</h3><p>Aplicamos estratÈgias da TCC, Terapia do Esquema e ACT com ritmo possÌvel, incluindo psicoeducaÁ„o, regulaÁ„o emocional e enfrentamento gradual.</p></div>
-          <div class="process-item reveal"><div class="process-num">05</div><h3>Acompanhamento e orientaÁ„o</h3><p>O processo È revisado com clareza. Quando envolve crianÁas e adolescentes, os respons·veis tambÈm recebem orientaÁ„o clÌnica.</p></div>
+          <div class="process-item reveal"><div class="process-num">01</div><h3>Primeira avalia√ß√£o</h3><p>Entendemos a demanda, a idade, o contexto familiar, escolar, social ou profissional e o que precisa ser cuidado primeiro.</p></div>
+          <div class="process-item reveal"><div class="process-num">02</div><h3>Mapa da ansiedade</h3><p>Investigamos gatilhos, sintomas, pensamentos, comportamentos de evita√ß√£o e padr√µes emocionais que mant√™m o sofrimento.</p></div>
+          <div class="process-item reveal"><div class="process-num">03</div><h3>Plano para cada fase</h3><p>Crian√ßas, adolescentes e adultos precisam de recursos diferentes. O plano terap√™utico respeita desenvolvimento, linguagem e autonomia.</p></div>
+          <div class="process-item reveal"><div class="process-num">04</div><h3>Interven√ß√µes baseadas em evid√™ncias</h3><p>Aplicamos estrat√©gias da TCC, Terapia do Esquema e ACT com ritmo poss√≠vel, incluindo psicoeduca√ß√£o, regula√ß√£o emocional e enfrentamento gradual.</p></div>
+          <div class="process-item reveal"><div class="process-num">05</div><h3>Acompanhamento e orienta√ß√£o</h3><p>O processo √© revisado com clareza. Quando envolve crian√ßas e adolescentes, os respons√°veis tamb√©m recebem orienta√ß√£o cl√≠nica.</p></div>
         </div>
       </div>
     </section>
-    <section class="approach" aria-label="Abordagens terapÍuticas">
+    <section class="approach" aria-label="Abordagens terap√™uticas">
       <div class="approach-band">
-        <div class="approach-item reveal"><h3>TCC</h3><p>Clareza sobre pensamentos, emoÁıes e comportamentos que mantÍm o sofrimento.</p></div>
-        <div class="approach-item reveal delay-1"><h3>Esquema</h3><p>Profundidade para compreender padrıes antigos que continuam organizando escolhas atuais.</p></div>
-        <div class="approach-item reveal delay-2"><h3>ACT</h3><p>Flexibilidade psicolÛgica para agir com mais presenÁa, valores e autonomia.</p></div>
+        <div class="approach-item reveal"><h3>TCC</h3><p>Clareza sobre pensamentos, emo√ß√µes e comportamentos que mant√™m o sofrimento.</p></div>
+        <div class="approach-item reveal delay-1"><h3>Esquema</h3><p>Profundidade para compreender padr√µes antigos que continuam organizando escolhas atuais.</p></div>
+        <div class="approach-item reveal delay-2"><h3>ACT</h3><p>Flexibilidade psicol√≥gica para agir com mais presen√ßa, valores e autonomia.</p></div>
       </div>
     </section>
     <section class="about" id="sobre">
       <div class="container about-grid">
         <figure class="about-photo reveal">
-          <img src="michelle-sobre-sentada.jpg?v=20260618" alt="Michelle Doneg· sentada no consultÛrio" />
+          <img src="michelle-sobre-sentada.jpg?v=20260618" alt="Michelle Doneg√° sentada no consult√≥rio" />
         </figure>
         <div class="about-copy">
-          <span class="eyebrow reveal">Sobre a psicÛloga</span>
-          <h2 class="section-title reveal delay-1">Autoridade clÌnica sem perder presenÁa <em>humana</em>.</h2>
-          <p class="reveal delay-2">Sou Michelle Doneg· dos Santos, psicÛloga clÌnica. Minha atuaÁ„o integra ciÍncia, escuta ativa e raciocÌnio clÌnico profundo para construir um processo terapÍutico que faÁa sentido para a pessoa que est· diante de mim, seja crianÁa, adolescente ou adulta.</p>
-          <p class="reveal delay-2">Trabalho com psicoterapia baseada em evidÍncias, especialmente Terapia Cognitivo-Comportamental, Terapia do Esquema e ACT, com atenÁ„o especial para ansiedade e padrıes emocionais. A tÈcnica importa, mas ela precisa encontrar uma pessoa inteira: sua histÛria, seus vÌnculos, seus medos, suas defesas e suas possibilidades.</p>
-          <p class="reveal delay-3"><strong>Acolher n„o È suavizar tudo.</strong> … oferecer um espaÁo seguro o bastante para olhar com honestidade, nomear o que dÛi e construir um caminho possÌvel.</p>
+          <span class="eyebrow reveal">Sobre a psic√≥loga</span>
+          <h2 class="section-title reveal delay-1">Autoridade cl√≠nica sem perder presen√ßa <em>humana</em>.</h2>
+          <p class="reveal delay-2">Sou Michelle Doneg√° dos Santos, psic√≥loga cl√≠nica. Minha atua√ß√£o integra ci√™ncia, escuta ativa e racioc√≠nio cl√≠nico profundo para construir um processo terap√™utico que fa√ßa sentido para a pessoa que est√° diante de mim, seja crian√ßa, adolescente ou adulta.</p>
+          <p class="reveal delay-2">Trabalho com psicoterapia baseada em evid√™ncias, especialmente Terapia Cognitivo-Comportamental, Terapia do Esquema e ACT, com aten√ß√£o especial para ansiedade e padr√µes emocionais. A t√©cnica importa, mas ela precisa encontrar uma pessoa inteira: sua hist√≥ria, seus v√≠nculos, seus medos, suas defesas e suas possibilidades.</p>
+          <p class="reveal delay-3"><strong>Acolher n√£o √© suavizar tudo.</strong> √â oferecer um espa√ßo seguro o bastante para olhar com honestidade, nomear o que d√≥i e construir um caminho poss√≠vel.</p>
           <div class="credentials reveal delay-3">
             <span class="credential">CRP 06/93008</span>
             <span class="credential">Jarinu/SP</span>
             <span class="credential">Online Brasil</span>
-            <span class="credential">Baseada em evidÍncias</span>
+            <span class="credential">Baseada em evid√™ncias</span>
           </div>
         </div>
       </div>
@@ -1320,7 +1350,7 @@
     <section class="editorial-visual editorial-visual-soft">
       <div class="container">
         <figure class="editorial-frame editorial-frame-wide">
-          <img src="anxiety-editorial.webp" alt="Caderno, xÌcara e flores em composiÁ„o clara" />
+          <img src="anxiety-editorial.webp" alt="Caderno, x√≠cara e flores em composi√ß√£o clara" />
         </figure>
       </div>
     </section>
@@ -1329,17 +1359,35 @@
         <div class="specialties-head">
           <div>
             <span class="eyebrow reveal">Terapia</span>
-            <h2 class="section-title reveal delay-1">Cuidado clÌnico para diferentes idades e formas de <em>ansiedade</em>.</h2>
+            <h2 class="section-title reveal delay-1">Cuidado cl√≠nico para diferentes idades e formas de <em>ansiedade</em>.</h2>
           </div>
-          <p class="section-lead reveal delay-2">A ansiedade È um dos eixos centrais do atendimento, mas ela aparece de formas muito diferentes em cada fase da vida. A clÌnica olha para sintomas, contexto, vÌnculos e desenvolvimento.</p>
+          <p class="section-lead reveal delay-2">A ansiedade √© um dos eixos centrais do atendimento, mas ela aparece de formas muito diferentes em cada fase da vida. A cl√≠nica olha para sintomas, contexto, v√≠nculos e desenvolvimento.</p>
         </div>
         <div class="specialty-grid">
-          <div class="specialty reveal"><small>01</small><h3>Ansiedade infantil</h3><p>Medos, inseguranÁa, queixas fÌsicas, irritabilidade, dificuldade de separaÁ„o, sono e adaptaÁ„o escolar.</p></div>
-          <div class="specialty reveal"><small>02</small><h3>Adolescentes</h3><p>Ansiedade social, autoestima, comparaÁ„o, press„o escolar, identidade, conflitos familiares e regulaÁ„o emocional.</p></div>
-          <div class="specialty reveal"><small>03</small><h3>Adultos ansiosos</h3><p>PreocupaÁ„o excessiva, crises, controle, autocobranÁa, culpa, procrastinaÁ„o emocional e exaust„o.</p></div>
-          <div class="specialty reveal"><small>04</small><h3>OrientaÁ„o parental</h3><p>Leitura clÌnica do comportamento, manejo emocional, limites, rotina e apoio aos respons·veis no processo terapÍutico.</p></div>
-          <div class="specialty reveal"><small>05</small><h3>Relacionamentos</h3><p>Limites, dependÍncia emocional, conflitos, repetiÁıes, comunicaÁ„o difÌcil e escolhas afetivas.</p></div>
-          <div class="specialty reveal"><small>06</small><h3>Burnout e autocobranÁa</h3><p>Esgotamento, perfeccionismo, press„o profissional, dificuldade de descansar e sensaÁ„o de nunca bastar.</p></div>
+          <a class="specialty reveal" href="adultos-ansiosos.html">
+            <figure><img src="servico-adultos-ansiosos.jpg?v=20260619" alt="Pessoa adulta em sofrimento emocional com as m&atilde;os no rosto" /></figure>
+            <div class="specialty-body"><small>01</small><h3>Adultos Ansiosos</h3><p>Preocupa&ccedil;&otilde;es excessivas, crises de ansiedade, autocobran&ccedil;a, dificuldade para descansar, sensa&ccedil;&atilde;o de estar sempre atrasado ou sobrecarregado. A terapia ajuda a compreender os padr&otilde;es que alimentam a ansiedade e desenvolver habilidades pr&aacute;ticas para recuperar equil&iacute;brio, clareza e qualidade de vida.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
+          <a class="specialty reveal" href="relacionamentos.html">
+            <figure><img src="servico-relacionamentos.jpg?v=20260619" alt="Duas pessoas de m&atilde;os dadas em gesto de apoio" /></figure>
+            <div class="specialty-body"><small>02</small><h3>Relacionamentos</h3><p>Relacionamentos saud&aacute;veis come&ccedil;am pela forma como nos relacionamos conosco. Depend&ecirc;ncia emocional, dificuldade de impor limites, medo de rejei&ccedil;&atilde;o, conflitos repetitivos e padr&otilde;es que se repetem ao longo da vida podem gerar sofrimento significativo.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
+          <a class="specialty reveal" href="burnout-autocobranca.html">
+            <figure><img src="servico-burnout-autocobranca.jpg?v=20260619" alt="Pessoa sobrecarregada cercada por cobran&ccedil;as" /></figure>
+            <div class="specialty-body"><small>03</small><h3>Burnout e Autocobran&ccedil;a</h3><p>Cansa&ccedil;o constante, perfeccionismo, sensa&ccedil;&atilde;o de nunca fazer o suficiente, dificuldade para desligar a mente e aproveitar momentos de descanso. A terapia ajuda a desenvolver uma rela&ccedil;&atilde;o mais saud&aacute;vel com trabalho, desempenho e bem-estar.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
+          <a class="specialty reveal" href="adolescentes.html">
+            <figure><img src="servico-adolescentes.jpg?v=20260619" alt="Adolescentes olhando para um celular em ambiente externo" /></figure>
+            <div class="specialty-body"><small>04</small><h3>Adolescentes</h3><p>Ansiedade, autoestima, compara&ccedil;&atilde;o constante, press&atilde;o escolar, conflitos familiares, inseguran&ccedil;as e dificuldades emocionais podem tornar essa fase mais dif&iacute;cil. A terapia favorece autoconhecimento, regula&ccedil;&atilde;o emocional e confian&ccedil;a.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
+          <a class="specialty reveal" href="ansiedade-infantil.html">
+            <figure><img src="servico-ansiedade-infantil-card.jpg?v=20260619" alt="Crian&ccedil;a pensativa em ambiente dom&eacute;stico" /></figure>
+            <div class="specialty-body"><small>05</small><h3>Ansiedade Infantil</h3><p>Medos intensos, inseguran&ccedil;a, irritabilidade, dores sem explica&ccedil;&atilde;o m&eacute;dica, dificuldade para dormir, separar-se dos pais ou enfrentar situa&ccedil;&otilde;es do dia a dia. O trabalho terap&ecirc;utico ajuda a crian&ccedil;a a compreender emo&ccedil;&otilde;es e desenvolver seguran&ccedil;a.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
+          <a class="specialty reveal" href="orientacao-parental.html">
+            <figure><img src="servico-orientacao-parental.jpg?v=20260619" alt="Casal em conversa de orienta&ccedil;&atilde;o com profissional" /></figure>
+            <div class="specialty-body"><small>06</small><h3>Orienta&ccedil;&atilde;o Parental</h3><p>Nem sempre a dificuldade est&aacute; na crian&ccedil;a. Muitas vezes ela est&aacute; tentando comunicar algo atrav&eacute;s das emo&ccedil;&otilde;es e atitudes. A orienta&ccedil;&atilde;o parental oferece estrat&eacute;gias baseadas em evid&ecirc;ncias para fortalecer v&iacute;nculos e limites saud&aacute;veis.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
         </div>
       </div>
     </section>
@@ -1347,15 +1395,15 @@
       <div class="container difference-layout">
         <div>
           <span class="eyebrow reveal">Diferenciais</span>
-          <h2 class="section-title reveal delay-1">SofisticaÁ„o, aqui, significa cuidado <em>preciso</em>.</h2>
-          <p class="section-lead reveal delay-2">Nada de promessa f·cil, frase pronta ou psicologia de efeito. O trabalho È Ètico, humano e tecnicamente sustentado, com leitura clÌnica adequada para inf‚ncia, adolescÍncia e vida adulta.</p>
+          <h2 class="section-title reveal delay-1">Sofistica√ß√£o, aqui, significa cuidado <em>preciso</em>.</h2>
+          <p class="section-lead reveal delay-2">Nada de promessa f√°cil, frase pronta ou psicologia de efeito. O trabalho √© √©tico, humano e tecnicamente sustentado, com leitura cl√≠nica adequada para inf√¢ncia, adolesc√™ncia e vida adulta.</p>
         </div>
         <div class="difference-list">
-          <div class="difference-row reveal"><span>01</span><div><h3>Atendimento por fase da vida</h3><p>A linguagem e as intervenÁıes mudam para crianÁas, adolescentes e adultos, sem perder rigor clÌnico.</p></div></div>
-          <div class="difference-row reveal"><span>02</span><div><h3>Especial atenÁ„o ‡ ansiedade</h3><p>O trabalho identifica gatilhos, evitaÁ„o, sintomas fÌsicos, pensamentos antecipatÛrios e recursos de enfrentamento.</p></div></div>
-          <div class="difference-row reveal"><span>03</span><div><h3>RaciocÌnio clÌnico profundo</h3><p>Antes de intervir, entendemos a funÁ„o dos sintomas, o contexto familiar e os padrıes que os mantÍm.</p></div></div>
-          <div class="difference-row reveal"><span>04</span><div><h3>Abordagem baseada em evidÍncias</h3><p>MÈtodo clÌnico com TCC, Terapia do Esquema, ACT e instrumentos quando fizer sentido.</p></div></div>
-          <div class="difference-row reveal"><span>05</span><div><h3>Cuidado Ètico e seguro</h3><p>Sigilo, clareza de combinados, orientaÁ„o aos respons·veis quando necess·rio e decis„o sem press„o.</p></div></div>
+          <div class="difference-row reveal"><span>01</span><div><h3>Atendimento por fase da vida</h3><p>A linguagem e as interven√ß√µes mudam para crian√ßas, adolescentes e adultos, sem perder rigor cl√≠nico.</p></div></div>
+          <div class="difference-row reveal"><span>02</span><div><h3>Especial aten√ß√£o √† ansiedade</h3><p>O trabalho identifica gatilhos, evita√ß√£o, sintomas f√≠sicos, pensamentos antecipat√≥rios e recursos de enfrentamento.</p></div></div>
+          <div class="difference-row reveal"><span>03</span><div><h3>Racioc√≠nio cl√≠nico profundo</h3><p>Antes de intervir, entendemos a fun√ß√£o dos sintomas, o contexto familiar e os padr√µes que os mant√™m.</p></div></div>
+          <div class="difference-row reveal"><span>04</span><div><h3>Abordagem baseada em evid√™ncias</h3><p>M√©todo cl√≠nico com TCC, Terapia do Esquema, ACT e instrumentos quando fizer sentido.</p></div></div>
+          <div class="difference-row reveal"><span>05</span><div><h3>Cuidado √©tico e seguro</h3><p>Sigilo, clareza de combinados, orienta√ß√£o aos respons√°veis quando necess√°rio e decis√£o sem press√£o.</p></div></div>
         </div>
       </div>
     </section>
@@ -1363,54 +1411,54 @@
       <div class="container ecosystem-grid">
         <div>
           <span class="eyebrow reveal">Ecossistema Psi Real</span>
-          <h2 class="section-title reveal delay-1">Terapia, produtos para psicÛlogas, gest„o e empresas no mesmo <em>universo</em>.</h2>
-          <p class="section-lead reveal delay-2">AlÈm da psicoterapia, Psi Real re˙ne uma plataforma clÌnica para terapeutas cognitivo-comportamentais, recursos para psicÛlogas, biblioteca, aplicativo e soluÁıes para empresas. Cada frente tem uma funÁ„o clara, sem perder a mesma identidade de cuidado e profundidade.</p>
+          <h2 class="section-title reveal delay-1">Terapia, produtos para psic√≥logas, gest√£o e empresas no mesmo <em>universo</em>.</h2>
+          <p class="section-lead reveal delay-2">Al√©m da psicoterapia, Psi Real re√∫ne uma plataforma cl√≠nica para terapeutas cognitivo-comportamentais, recursos para psic√≥logas, biblioteca, aplicativo e solu√ß√µes para empresas. Cada frente tem uma fun√ß√£o clara, sem perder a mesma identidade de cuidado e profundidade.</p>
           <div class="system-actions reveal delay-3">
             <a class="button-primary" href="https://psireal.app/" target="_blank" rel="noopener" target="_blank" rel="noopener">Abrir psireal.app</a>
-            <a class="button-secondary" href="https://psireal.com.br/">PsiReal ClÌnica</a>
+            <a class="button-secondary" href="https://psireal.com.br/">PsiReal Cl√≠nica</a>
             <a class="button-secondary" href="corporativo.html">Palestras para empresas</a>
           </div>
           <div class="portal-links reveal delay-3" aria-label="Links do ecossistema Psi Real">
-            <a class="portal-link" href="https://psireal.com.br/"><span><strong>PsiReal ClÌnica</strong><small>Instrumentos, evoluÁ„o emocional e organizaÁ„o clÌnica em uma ˙nica plataforma</small></span><em>?</em></a>
-            <a class="portal-link" href="https://psireal.app/" target="_blank" rel="noopener" target="_blank" rel="noopener"><span><strong>psireal.app</strong><small>Sistema separado de gest„o da clÌnica</small></span><em>?</em></a>
-            <a class="portal-link" href="https://psireal.com.br/biblioteca-tcc/index.html"><span><strong>Biblioteca PsiReal</strong><small>Materiais clÌnicos gratuitos para psicÛlogas</small></span><em>?</em></a>
-            <a class="portal-link" href="painel-psi.html"><span><strong>¡rea da assinante</strong><small>Acesso das psicÛlogas ‡ plataforma clÌnica e aos pacientes</small></span><em>?</em></a>
+            <a class="portal-link" href="https://psireal.com.br/"><span><strong>PsiReal Cl√≠nica</strong><small>Instrumentos, evolu√ß√£o emocional e organiza√ß√£o cl√≠nica em uma √∫nica plataforma</small></span><em>&rarr;</em></a>
+            <a class="portal-link" href="https://psireal.app/" target="_blank" rel="noopener" target="_blank" rel="noopener"><span><strong>psireal.app</strong><small>Sistema separado de gest√£o da cl√≠nica</small></span><em>&rarr;</em></a>
+            <a class="portal-link" href="https://psireal.com.br/biblioteca-tcc/index.html"><span><strong>Biblioteca PsiReal</strong><small>Materiais cl√≠nicos gratuitos para psic√≥logas</small></span><em>&rarr;</em></a>
+            <a class="portal-link" href="painel-psi.html"><span><strong>√Årea da assinante</strong><small>Acesso das psic√≥logas √† plataforma cl√≠nica e aos pacientes</small></span><em>&rarr;</em></a>
           </div>
         </div>
         <div class="system-panel">
           <div class="system-row reveal">
             <span>01</span>
             <div>
-              <h3>PsiReal ClÌnica</h3>
-              <p>Plataforma clÌnica para psicÛlogas com instrumentos, aplicaÁıes via link, acompanhamento longitudinal, evoluÁ„o emocional e insights terapÍuticos.</p>
+              <h3>PsiReal Cl√≠nica</h3>
+              <p>Plataforma cl√≠nica para psic√≥logas com instrumentos, aplica√ß√µes via link, acompanhamento longitudinal, evolu√ß√£o emocional e insights terap√™uticos.</p>
             </div>
           </div>
           <div class="system-row reveal">
             <span>02</span>
             <div>
-              <h3>Painel clÌnico integrado</h3>
-              <p>O painel de esquemas vive dentro da plataforma, junto dos instrumentos liberados e da evoluÁ„o emocional de cada paciente.</p>
+              <h3>Painel cl√≠nico integrado</h3>
+              <p>O painel de esquemas vive dentro da plataforma, junto dos instrumentos liberados e da evolu√ß√£o emocional de cada paciente.</p>
             </div>
           </div>
           <div class="system-row reveal">
             <span>03</span>
             <div>
               <h3>App e biblioteca Psi Real</h3>
-              <p>A Biblioteca PsiReal È a ·rea p˙blica gratuita; o psireal.app segue como sistema separado de gest„o da clÌnica.</p>
+              <p>A Biblioteca PsiReal √© a √°rea p√∫blica gratuita; o psireal.app segue como sistema separado de gest√£o da cl√≠nica.</p>
             </div>
           </div>
           <div class="system-row reveal">
             <span>04</span>
             <div>
-              <h3>Supervis„o clÌnica</h3>
-              <p>Uma frente prÛpria para psicÛlogas que buscam mais seguranÁa tÈcnica, raciocÌnio clÌnico e desenvolvimento profissional.</p>
+              <h3>Supervis√£o cl√≠nica</h3>
+              <p>Uma frente pr√≥pria para psic√≥logas que buscam mais seguran√ßa t√©cnica, racioc√≠nio cl√≠nico e desenvolvimento profissional.</p>
             </div>
           </div>
           <div class="system-row reveal">
             <span>05</span>
             <div>
-              <h3>Palestras e soluÁıes para empresas</h3>
-              <p>A frente corporativa leva sa˙de mental, ansiedade, lideranÁa e autocuidado para equipes com repertÛrio clÌnico e experiÍncia organizacional.</p>
+              <h3>Palestras e solu√ß√µes para empresas</h3>
+              <p>A frente corporativa leva sa√∫de mental, ansiedade, lideran√ßa e autocuidado para equipes com repert√≥rio cl√≠nico e experi√™ncia organizacional.</p>
             </div>
           </div>
         </div>
@@ -1418,18 +1466,18 @@
     </section>
     <section class="faq" id="faq">
       <div class="container-narrow">
-        <span class="eyebrow reveal">D˙vidas frequentes</span>
-        <h2 class="section-title reveal delay-1">Antes de comeÁar</h2>
+        <span class="eyebrow reveal">D√∫vidas frequentes</span>
+        <h2 class="section-title reveal delay-1">Antes de come√ßar</h2>
         <p class="section-lead reveal delay-2">Algumas respostas para tornar o primeiro passo mais simples.</p>
         <div class="faq-list">
-          <div class="faq-item reveal"><button class="faq-q" type="button">Como È a primeira sess„o?<span class="faq-icon">+</span></button><div class="faq-a">… uma conversa inicial para compreender a demanda, a histÛria recente e o que precisa ser cuidado. No atendimento infantil, essa etapa pode envolver os respons·veis para entender rotina, escola, comportamento e contexto familiar.</div></div>
-          <div class="faq-item reveal"><button class="faq-q" type="button">VocÍ atende crianÁas e adolescentes?<span class="faq-icon">+</span></button><div class="faq-a">Sim. O atendimento considera a fase de desenvolvimento, a linguagem da crianÁa ou adolescente e, quando necess·rio, inclui orientaÁ„o aos respons·veis.</div></div>
-          <div class="faq-item reveal"><button class="faq-q" type="button">VocÍ trabalha com ansiedade?<span class="faq-icon">+</span></button><div class="faq-a">Sim. Ansiedade È um dos focos centrais da clÌnica, incluindo ansiedade infantil, ansiedade social, crises, preocupaÁ„o excessiva, autocobranÁa, evitaÁ„o e sintomas fÌsicos associados.</div></div>
-          <div class="faq-item reveal"><button class="faq-q" type="button">O atendimento online funciona?<span class="faq-icon">+</span></button><div class="faq-a">Sim. O atendimento online È realizado por videochamada, com os mesmos critÈrios de sigilo, preparo e cuidado clÌnico do presencial.</div></div>
-          <div class="faq-item reveal"><button class="faq-q" type="button">Qual a duraÁ„o e frequÍncia?<span class="faq-icon">+</span></button><div class="faq-a">As sessıes costumam ser semanais e duram cerca de 50 minutos. Ajustes podem ser conversados conforme a necessidade clÌnica.</div></div>
-          <div class="faq-item reveal"><button class="faq-q" type="button">A terapia tem prazo?<span class="faq-icon">+</span></button><div class="faq-a">Depende dos objetivos, da complexidade da demanda e do ritmo do processo. O caminho È acompanhado e revisado com clareza.</div></div>
-          <div class="faq-item reveal"><button class="faq-q" type="button">Tudo que eu disser È sigiloso?<span class="faq-icon">+</span></button><div class="faq-a">Sim. O sigilo È parte essencial do trabalho psicolÛgico, respeitando as normas Èticas da profiss„o.</div></div>
-          <div class="faq-item reveal"><button class="faq-q" type="button">Como agendar?<span class="faq-icon">+</span></button><div class="faq-a">VocÍ pode enviar uma mensagem pelo WhatsApp ou preencher o formul·rio. O retorno acontece pelo WhatsApp com as prÛximas possibilidades de hor·rio.</div></div>
+          <div class="faq-item reveal"><button class="faq-q" type="button">Como √© a primeira sess√£o?<span class="faq-icon">+</span></button><div class="faq-a">√â uma conversa inicial para compreender a demanda, a hist√≥ria recente e o que precisa ser cuidado. No atendimento infantil, essa etapa pode envolver os respons√°veis para entender rotina, escola, comportamento e contexto familiar.</div></div>
+          <div class="faq-item reveal"><button class="faq-q" type="button">Voc√™ atende crian√ßas e adolescentes?<span class="faq-icon">+</span></button><div class="faq-a">Sim. O atendimento considera a fase de desenvolvimento, a linguagem da crian√ßa ou adolescente e, quando necess√°rio, inclui orienta√ß√£o aos respons√°veis.</div></div>
+          <div class="faq-item reveal"><button class="faq-q" type="button">Voc√™ trabalha com ansiedade?<span class="faq-icon">+</span></button><div class="faq-a">Sim. Ansiedade √© um dos focos centrais da cl√≠nica, incluindo ansiedade infantil, ansiedade social, crises, preocupa√ß√£o excessiva, autocobran√ßa, evita√ß√£o e sintomas f√≠sicos associados.</div></div>
+          <div class="faq-item reveal"><button class="faq-q" type="button">O atendimento online funciona?<span class="faq-icon">+</span></button><div class="faq-a">Sim. O atendimento online √© realizado por videochamada, com os mesmos crit√©rios de sigilo, preparo e cuidado cl√≠nico do presencial.</div></div>
+          <div class="faq-item reveal"><button class="faq-q" type="button">Qual a dura√ß√£o e frequ√™ncia?<span class="faq-icon">+</span></button><div class="faq-a">As sess√µes costumam ser semanais e duram cerca de 50 minutos. Ajustes podem ser conversados conforme a necessidade cl√≠nica.</div></div>
+          <div class="faq-item reveal"><button class="faq-q" type="button">A terapia tem prazo?<span class="faq-icon">+</span></button><div class="faq-a">Depende dos objetivos, da complexidade da demanda e do ritmo do processo. O caminho √© acompanhado e revisado com clareza.</div></div>
+          <div class="faq-item reveal"><button class="faq-q" type="button">Tudo que eu disser √© sigiloso?<span class="faq-icon">+</span></button><div class="faq-a">Sim. O sigilo √© parte essencial do trabalho psicol√≥gico, respeitando as normas √©ticas da profiss√£o.</div></div>
+          <div class="faq-item reveal"><button class="faq-q" type="button">Como agendar?<span class="faq-icon">+</span></button><div class="faq-a">Voc√™ pode enviar uma mensagem pelo WhatsApp ou preencher o formul√°rio. O retorno acontece pelo WhatsApp com as pr√≥ximas possibilidades de hor√°rio.</div></div>
         </div>
       </div>
     </section>
@@ -1438,26 +1486,28 @@
         <div>
           <span class="eyebrow reveal">Contato</span>
           <h2 class="section-title reveal delay-1">Uma primeira conversa, sem pressa e sem <em>compromisso</em>.</h2>
-          <p class="section-lead reveal delay-2">Se vocÍ sente que chegou a hora de parar de atravessar tudo sozinha, deixe seus dados. O retorno È feito pelo WhatsApp.</p>
+          <p class="section-lead reveal delay-2">Se voc√™ sente que chegou a hora de parar de atravessar tudo sozinha, deixe seus dados. O retorno √© feito pelo WhatsApp.</p>
         </div>
-        <form id="contactForm" class="reveal delay-2">
-          <div class="form-row">
-            <div class="form-group"><label for="nome">Nome</label><input id="nome" name="nome" type="text" placeholder="Seu nome" required /></div>
-            <div class="form-group"><label for="whatsapp">WhatsApp</label><input id="whatsapp" name="whatsapp" type="tel" placeholder="(11) 99999-0000" required /></div>
-          </div>
-          <div class="form-group"><label for="servico">O que vocÍ busca</label><select id="servico" name="servico" required><option value="">Selecione</option><option>Terapia infantil</option><option>Terapia para adolescente</option><option>Terapia para adulto</option><option>Ansiedade</option><option>OrientaÁ„o parental</option><option>Relacionamentos</option><option>AutocobranÁa e burnout</option><option>D˙vida inicial</option></select></div>
-          <div class="form-group"><label for="mensagem">Mensagem opcional</label><textarea id="mensagem" name="mensagem" placeholder="Conte brevemente o que est· buscando."></textarea></div>
-          <div class="form-message success" id="formSuccess">Mensagem enviada. Em instantes abriremos o WhatsApp para continuar.</div>
-          <div class="form-message error" id="formError">N„o foi possÌvel enviar agora. Tente novamente ou use o WhatsApp.</div>
-          <button class="form-button" id="formBtn" type="submit"><span id="formBtnText">Enviar mensagem</span></button>
-        </form>
+        <a class="external-form-card reveal delay-2" href="https://michellepsicologiareal-collab.github.io/formulario-psicologia/" target="_blank" rel="noopener" aria-label="Abrir formulario Psicologia Real">
+  <span class="external-form-badge">Psicologia Real</span>
+  <strong>Ol&aacute;, seja bem-vindo(a).</strong>
+  <em>Como posso te ajudar?</em>
+  <span class="external-form-caption">Escolha seu perfil no formul&aacute;rio completo e siga pelo caminho certo.</span>
+  <span class="external-form-options" aria-hidden="true">
+    <span class="external-form-option"><span class="external-form-icon">1</span><span><b>Sou paciente ou respons&aacute;vel</b><small>Agendar uma conversa inicial ou saber mais sobre a terapia.</small></span></span>
+    <span class="external-form-option"><span class="external-form-icon">2</span><span><b>Sou psic&oacute;loga(o)</b><small>Supervis&atilde;o cl&iacute;nica, mentoria ou desenvolvimento profissional.</small></span></span>
+    <span class="external-form-option"><span class="external-form-icon">3</span><span><b>Produto digital</b><small>Suporte, d&uacute;vidas de acesso, templates ou sistemas.</small></span></span>
+    <span class="external-form-option"><span class="external-form-icon">4</span><span><b>Contratar palestra</b><small>Sa&uacute;de mental para empresas, escolas ou eventos.</small></span></span>
+  </span>
+  <span class="external-form-button">Abrir formul&aacute;rio completo</span>
+</a>
       </div>
     </section>
     <section class="final-cta">
       <div class="container-narrow">
-        <span class="eyebrow reveal">Uma decis„o de cada vez</span>
-        <h2 class="reveal delay-1">VocÍ n„o precisa continuar vivendo no <em>autom·tico</em>.</h2>
-        <p class="reveal delay-2">Para uma crianÁa, um adolescente ou um adulto, ansiedade n„o precisa virar modo de vida. O primeiro passo n„o precisa resolver tudo. Ele sÛ precisa comeÁar.</p>
+        <span class="eyebrow reveal">Uma decis√£o de cada vez</span>
+        <h2 class="reveal delay-1">Voc√™ n√£o precisa continuar vivendo no <em>autom√°tico</em>.</h2>
+        <p class="reveal delay-2">Para uma crian√ßa, um adolescente ou um adulto, ansiedade n√£o precisa virar modo de vida. O primeiro passo n√£o precisa resolver tudo. Ele s√≥ precisa come√ßar.</p>
         <a class="button-primary reveal delay-3" href="https://michellepsicologiareal-collab.github.io/formulario-psicologia/" target="_blank" rel="noopener">Agendar conversa inicial</a>
       </div>
     </section>
@@ -1468,17 +1518,17 @@
         <div class="footer-brand">Psicologia Real</div>
         <div class="footer-note">CRP 06/93008 - Jarinu/SP - Online para todo o Brasil</div>
       </div>
-      <div class="footer-links" aria-label="P·ginas secund·rias">
+      <div class="footer-links" aria-label="P√°ginas secund√°rias">
         <a href="#terapia">Terapia</a>
-        <a href="supervisao.html">Supervis„o</a>
+        <a href="supervisao.html">Supervis√£o</a>
         <a href="corporativo.html">Corporativo</a>
-        <a href="https://psireal.com.br/">PsiReal ClÌnica</a>
+        <a href="https://psireal.com.br/">PsiReal Cl√≠nica</a>
         <a href="https://psireal.app/" target="_blank" rel="noopener" target="_blank" rel="noopener">psireal.app</a>
         <a href="https://psireal.com.br/biblioteca-tcc/index.html">Biblioteca PsiReal</a>
-        <a href="painel-psi.html">¡rea da assinante</a>
+        <a href="painel-psi.html">√Årea da assinante</a>
         <a href="painel-esquemas.html">Painel Esquemas</a>
         <a class="admin-entry" href="https://psireal.com.br/painel-tcc.html">Acesso restrito</a>
-        <a href="https://psireal.com.br/">Formul·rio YSQ</a>
+        <a href="https://psireal.com.br/">Formul√°rio YSQ</a>
         <a href="ansiedade.html">Guia ansiedade</a>
       </div>
     </div>
@@ -1503,49 +1553,6 @@
         document.querySelectorAll('.faq-item.open').forEach((openItem) => openItem.classList.remove('open'));
         if (!wasOpen) item.classList.add('open');
       });
-    });
-    const SB_URL = 'https://qpwjxacdjzzsyjbuuwsq.supabase.co';
-    const SB_KEY = 'sb_publishable_hQclCJaEsVjcnGM4WAoYmA_r8H8NqAp';
-    document.getElementById('contactForm').addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const btn = document.getElementById('formBtn');
-      const btnText = document.getElementById('formBtnText');
-      const success = document.getElementById('formSuccess');
-      const error = document.getElementById('formError');
-      const payload = {
-        nome: document.getElementById('nome').value.trim(),
-        whatsapp: document.getElementById('whatsapp').value.trim(),
-        servico: document.getElementById('servico').value,
-        mensagem: document.getElementById('mensagem').value.trim() || null,
-        pagina: 'index-terapia-premium',
-        status: 'novo'
-      };
-      btn.disabled = true;
-      btnText.textContent = 'Enviando...';
-      success.style.display = 'none';
-      error.style.display = 'none';
-      try {
-        const response = await fetch(SB_URL + '/rest/v1/contatos', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'apikey': SB_KEY,
-            'Authorization': 'Bearer ' + SB_KEY,
-            'Prefer': 'return=minimal'
-          },
-          body: JSON.stringify(payload)
-        });
-        if (!response.ok && response.status !== 201) throw new Error(String(response.status));
-        success.style.display = 'block';
-        document.getElementById('contactForm').reset();
-        const message = encodeURIComponent('Ol· Michelle! Me chamo ' + payload.nome + '.\nInteresse: ' + payload.servico + (payload.mensagem ? '\n\n' + payload.mensagem : ''));
-        setTimeout(() => window.open('https://michellepsicologiareal-collab.github.io/formulario-psicologia/', '_blank'), 700);
-      } catch (err) {
-        error.style.display = 'block';
-      } finally {
-        btn.disabled = false;
-        btnText.textContent = 'Enviar mensagem';
-      }
     });
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
