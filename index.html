@@ -213,6 +213,7 @@
       padding: 30px clamp(20px, 3vw, 34px);
       text-decoration: none;
       border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
       transition: background .25s ease;
     }
     .service-mark {
@@ -234,7 +235,8 @@
       stroke-linecap: round;
       stroke-linejoin: round;
     }
-    .service-link:last-child { border-right: 0; }
+    .service-link:nth-child(3n) { border-right: 0; }
+    .service-link:nth-last-child(-n+3) { border-bottom: 0; }
     .service-link span {
       color: var(--rose);
       font-size: 11px;
@@ -1231,29 +1233,41 @@
     </section>
     <section class="service-entry" aria-label="Frentes de atuação">
       <div class="service-grid">
-        <a class="service-link service-photo-link" href="terapia.html">
-          <figure><img src="servico-terapia-individual.jpg?v=20260617" alt="Pessoa lendo livro de terapia cognitivo-comportamental" /></figure>
+        <a class="service-link service-photo-link" href="adultos-ansiosos.html">
+          <figure><img src="servico-adultos-ansiosos.jpg?v=20260619" alt="Pessoa adulta em sofrimento emocional com as mãos no rosto" /></figure>
           <span>Terapia</span>
-          <strong>Individual</strong>
-          <small>Atendimento clínico para ansiedade, autocobrança, sobrecarga emocional e padrões que se repetem.</small>
+          <strong>Adultos ansiosos</strong>
+          <small>Preocupações excessivas, crises de ansiedade, autocobrança e sensação de sobrecarga constante.</small>
         </a>
-        <a class="service-link service-photo-link" href="terapia.html">
-          <figure><img src="servico-terapia-infantil.jpg?v=20260617" alt="Criança em momento de calma e cuidado emocional" /></figure>
+        <a class="service-link service-photo-link" href="relacionamentos.html">
+          <figure><img src="servico-relacionamentos.jpg?v=20260619" alt="Duas pessoas de mãos dadas em gesto de apoio" /></figure>
+          <span>Terapia</span>
+          <strong>Relacionamentos</strong>
+          <small>Limites, dependência emocional, medo de rejeição, conflitos repetitivos e padrões afetivos.</small>
+        </a>
+        <a class="service-link service-photo-link" href="burnout-autocobranca.html">
+          <figure><img src="servico-burnout-autocobranca.jpg?v=20260619" alt="Pessoa sobrecarregada cercada por cobranças" /></figure>
+          <span>Terapia</span>
+          <strong>Burnout</strong>
+          <small>Cansaço constante, perfeccionismo, dificuldade de descansar e cobrança interna excessiva.</small>
+        </a>
+        <a class="service-link service-photo-link" href="adolescentes.html">
+          <figure><img src="servico-adolescentes.jpg?v=20260619" alt="Adolescentes olhando para um celular em ambiente externo" /></figure>
+          <span>Terapia</span>
+          <strong>Adolescentes</strong>
+          <small>Ansiedade, autoestima, comparação constante, pressão escolar e conflitos familiares.</small>
+        </a>
+        <a class="service-link service-photo-link" href="ansiedade-infantil.html">
+          <figure><img src="servico-ansiedade-infantil-card.jpg?v=20260619" alt="Criança pensativa em ambiente doméstico" /></figure>
           <span>Terapia</span>
           <strong>Infantil</strong>
-          <small>Cuidado para medos, insegurança, irritabilidade, sono, adaptação escolar e orientação aos responsáveis.</small>
+          <small>Medos intensos, insegurança, irritabilidade, sono, separação dos pais e adaptação escolar.</small>
         </a>
-        <a class="service-link service-photo-link" href="terapia.html">
-          <figure><img src="servico-terapia-casal.jpg?v=20260617" alt="Casal de mãos dadas representando vínculo e cuidado relacional" /></figure>
-          <span>Terapia</span>
-          <strong>Casal</strong>
-          <small>Espaço para comunicação, limites, vínculos, repetição de conflitos e reconstrução de acordos possíveis.</small>
-        </a>
-        <a class="service-link service-photo-link" href="supervisao.html">
-          <figure><img src="servico-supervisao.jpg?v=20260617" alt="Livro e café representando estudo clínico e supervisão" /></figure>
-          <span>Para psicólogas</span>
-          <strong>Supervisão</strong>
-          <small>Supervisão clínica em TCC para desenvolver raciocínio clínico, segurança técnica e condução de casos.</small>
+        <a class="service-link service-photo-link" href="orientacao-parental.html">
+          <figure><img src="servico-orientacao-parental.jpg?v=20260619" alt="Casal em conversa de orientação com profissional" /></figure>
+          <span>Família</span>
+          <strong>Orientação parental</strong>
+          <small>Estratégias para compreender comportamentos, fortalecer vínculos e estabelecer limites saudáveis.</small>
         </a>
       </div>
     </section>
