@@ -453,28 +453,44 @@
     }
     .specialty-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
     }
     .specialty {
-      min-height: 210px;
-      padding: clamp(26px, 3.4vw, 44px);
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      background: rgba(255,253,249,.34);
-      transition: background .25s ease, transform .25s ease;
+      min-height: 100%;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      overflow: hidden;
+      background: rgba(255,253,249,.78);
+      color: inherit;
+      text-decoration: none;
+      box-shadow: 0 22px 60px rgba(79,59,55,.09);
+      transition: background .25s ease, transform .25s ease, box-shadow .25s ease;
     }
-    .specialty:hover { background: var(--white); transform: translateY(-2px); }
+    .specialty:hover { background: var(--white); transform: translateY(-4px); box-shadow: 0 28px 70px rgba(79,59,55,.13); }
+    .specialty figure { height: 210px; overflow: hidden; background: var(--paper-deep); }
+    .specialty img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+    .specialty:hover img { transform: scale(1.035); }
+    .specialty-body { padding: clamp(22px, 2.8vw, 32px); }
     .specialty small {
-      display: block;
-      margin-bottom: 34px;
-      color: var(--rose);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      margin-bottom: 22px;
+      border-radius: 15px;
+      color: var(--wine);
+      background: var(--paper-deep);
+      border: 1px solid var(--line);
       font-family: var(--serif);
-      font-size: 25px;
+      font-size: 24px;
+      line-height: 1;
     }
-    .specialty h3 { color: var(--wine); font-size: 17px; font-weight: 500; }
-    .specialty p { margin-top: 12px; color: var(--muted); font-size: 14.5px; line-height: 1.75; }
+    .specialty h3 { color: var(--wine); font-size: 18px; font-weight: 500; }
+    .specialty p { margin-top: 12px; color: var(--muted); font-size: 14.2px; line-height: 1.72; }
+    .specialty-more { display: inline-block; margin-top: 18px; color: var(--wine); font-size: 13px; font-weight: 600; }
     .difference { background: var(--white); }
     .difference-layout {
       display: grid;
@@ -1334,12 +1350,30 @@
           <p class="section-lead reveal delay-2">A ansiedade é um dos eixos centrais do atendimento, mas ela aparece de formas muito diferentes em cada fase da vida. A clínica olha para sintomas, contexto, vínculos e desenvolvimento.</p>
         </div>
         <div class="specialty-grid">
-          <div class="specialty reveal"><small>01</small><h3>Ansiedade infantil</h3><p>Medos, insegurança, queixas físicas, irritabilidade, dificuldade de separação, sono e adaptação escolar.</p></div>
-          <div class="specialty reveal"><small>02</small><h3>Adolescentes</h3><p>Ansiedade social, autoestima, comparação, pressão escolar, identidade, conflitos familiares e regulação emocional.</p></div>
-          <div class="specialty reveal"><small>03</small><h3>Adultos ansiosos</h3><p>Preocupação excessiva, crises, controle, autocobrança, culpa, procrastinação emocional e exaustão.</p></div>
-          <div class="specialty reveal"><small>04</small><h3>Orientação parental</h3><p>Leitura clínica do comportamento, manejo emocional, limites, rotina e apoio aos responsáveis no processo terapêutico.</p></div>
-          <div class="specialty reveal"><small>05</small><h3>Relacionamentos</h3><p>Limites, dependência emocional, conflitos, repetições, comunicação difícil e escolhas afetivas.</p></div>
-          <div class="specialty reveal"><small>06</small><h3>Burnout e autocobrança</h3><p>Esgotamento, perfeccionismo, pressão profissional, dificuldade de descansar e sensação de nunca bastar.</p></div>
+          <a class="specialty reveal" href="adultos-ansiosos.html">
+            <figure><img src="servico-adultos-ansiosos.jpg?v=20260619" alt="Pessoa adulta em sofrimento emocional com as m&atilde;os no rosto" /></figure>
+            <div class="specialty-body"><small>01</small><h3>Adultos Ansiosos</h3><p>Preocupa&ccedil;&otilde;es excessivas, crises de ansiedade, autocobran&ccedil;a, dificuldade para descansar, sensa&ccedil;&atilde;o de estar sempre atrasado ou sobrecarregado. A terapia ajuda a compreender os padr&otilde;es que alimentam a ansiedade e desenvolver habilidades pr&aacute;ticas para recuperar equil&iacute;brio, clareza e qualidade de vida.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
+          <a class="specialty reveal" href="relacionamentos.html">
+            <figure><img src="servico-relacionamentos.jpg?v=20260619" alt="Duas pessoas de m&atilde;os dadas em gesto de apoio" /></figure>
+            <div class="specialty-body"><small>02</small><h3>Relacionamentos</h3><p>Relacionamentos saud&aacute;veis come&ccedil;am pela forma como nos relacionamos conosco. Depend&ecirc;ncia emocional, dificuldade de impor limites, medo de rejei&ccedil;&atilde;o, conflitos repetitivos e padr&otilde;es que se repetem ao longo da vida podem gerar sofrimento significativo.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
+          <a class="specialty reveal" href="burnout-autocobranca.html">
+            <figure><img src="servico-burnout-autocobranca.jpg?v=20260619" alt="Pessoa sobrecarregada cercada por cobran&ccedil;as" /></figure>
+            <div class="specialty-body"><small>03</small><h3>Burnout e Autocobran&ccedil;a</h3><p>Cansa&ccedil;o constante, perfeccionismo, sensa&ccedil;&atilde;o de nunca fazer o suficiente, dificuldade para desligar a mente e aproveitar momentos de descanso. A terapia ajuda a desenvolver uma rela&ccedil;&atilde;o mais saud&aacute;vel com trabalho, desempenho e bem-estar.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
+          <a class="specialty reveal" href="adolescentes.html">
+            <figure><img src="servico-adolescentes.jpg?v=20260619" alt="Adolescentes olhando para um celular em ambiente externo" /></figure>
+            <div class="specialty-body"><small>04</small><h3>Adolescentes</h3><p>Ansiedade, autoestima, compara&ccedil;&atilde;o constante, press&atilde;o escolar, conflitos familiares, inseguran&ccedil;as e dificuldades emocionais podem tornar essa fase mais dif&iacute;cil. A terapia favorece autoconhecimento, regula&ccedil;&atilde;o emocional e confian&ccedil;a.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
+          <a class="specialty reveal" href="ansiedade-infantil.html">
+            <figure><img src="servico-ansiedade-infantil-card.jpg?v=20260619" alt="Crian&ccedil;a pensativa em ambiente dom&eacute;stico" /></figure>
+            <div class="specialty-body"><small>05</small><h3>Ansiedade Infantil</h3><p>Medos intensos, inseguran&ccedil;a, irritabilidade, dores sem explica&ccedil;&atilde;o m&eacute;dica, dificuldade para dormir, separar-se dos pais ou enfrentar situa&ccedil;&otilde;es do dia a dia. O trabalho terap&ecirc;utico ajuda a crian&ccedil;a a compreender emo&ccedil;&otilde;es e desenvolver seguran&ccedil;a.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
+          <a class="specialty reveal" href="orientacao-parental.html">
+            <figure><img src="servico-orientacao-parental.jpg?v=20260619" alt="Casal em conversa de orienta&ccedil;&atilde;o com profissional" /></figure>
+            <div class="specialty-body"><small>06</small><h3>Orienta&ccedil;&atilde;o Parental</h3><p>Nem sempre a dificuldade est&aacute; na crian&ccedil;a. Muitas vezes ela est&aacute; tentando comunicar algo atrav&eacute;s das emo&ccedil;&otilde;es e atitudes. A orienta&ccedil;&atilde;o parental oferece estrat&eacute;gias baseadas em evid&ecirc;ncias para fortalecer v&iacute;nculos e limites saud&aacute;veis.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
         </div>
       </div>
     </section>
