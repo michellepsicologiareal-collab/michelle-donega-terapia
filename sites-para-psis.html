@@ -70,11 +70,14 @@
     .mock-buttons{display:flex;gap:10px;margin-top:24px}
     .mock-buttons b{width:118px;height:42px;border-radius:14px;background:var(--wine)}
     .mock-buttons b:last-child{background:#fff;border:1px solid var(--line)}
-    .mock-photo{height:340px;border-radius:28px;background:radial-gradient(circle at 40% 42%,rgba(255,255,255,.55),transparent 18%),linear-gradient(135deg,#d8e4e8,#f4eef5 46%,#c4b9aa);position:relative;overflow:hidden}
-    .mock-photo:after{content:"";position:absolute;right:24px;bottom:24px;width:128px;height:104px;border-radius:22px;background:#fff;box-shadow:0 18px 40px rgba(75,32,43,.14)}
+    .mock-photo{height:340px;border-radius:28px;position:relative;overflow:hidden;box-shadow:0 18px 45px rgba(75,32,43,.16)}
+    .mock-photo img,.phone-photo img,.service-shot img{width:100%;height:100%;object-fit:cover;display:block}
+    .mock-photo:after{content:"20+";position:absolute;right:24px;bottom:24px;width:128px;height:104px;border-radius:22px;background:rgba(255,255,255,.9);box-shadow:0 18px 40px rgba(75,32,43,.14);display:flex;align-items:center;justify-content:center;color:var(--wine);font-size:42px;font-weight:700}
+    .service-shots{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+    .service-shot{height:150px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 14px 32px rgba(75,32,43,.09)}
     .phone-mock{border-radius:38px;max-width:370px;justify-self:center;padding:16px;background:#2b2428}
     .phone-screen{min-height:520px;border-radius:28px;background:#fff;overflow:hidden}
-    .phone-photo{height:210px;background:linear-gradient(135deg,#d8e4e8,#f4eef5 55%,#b9a7c9)}
+    .phone-photo{height:210px;overflow:hidden}
     .phone-copy{padding:24px}
     .phone-title{height:86px;border-radius:18px;background:linear-gradient(180deg,var(--wine),#8d7bb0);opacity:.88}
     .phone-card{height:86px;margin-top:18px;border:1px solid var(--line);border-radius:20px;background:#fbfaf8}
@@ -85,7 +88,7 @@
       .nav{padding:14px 22px}.links{display:none}
       .hero{grid-template-columns:1fr;padding:54px 22px 62px;gap:28px}
       .panel{border-radius:26px;padding:18px}.cards{grid-template-columns:1fr}
-      .mockups{padding:56px 22px}.mockup-grid{grid-template-columns:1fr}.mock-hero{grid-template-columns:1fr}.mock-photo{height:260px}.phone-mock{width:100%;max-width:360px}
+      .mockups{padding:56px 22px}.mockup-grid{grid-template-columns:1fr}.mock-hero{grid-template-columns:1fr}.mock-photo{height:260px}.service-shots{grid-template-columns:1fr}.phone-mock{width:100%;max-width:360px}
       .strip{display:block;padding:30px 22px}.strip .btn{margin-top:18px;width:100%}
     }
   </style>
@@ -149,13 +152,18 @@
                 <div class="mock-lines"><i></i><i></i><i></i></div>
                 <div class="mock-buttons"><b></b><b></b></div>
               </div>
-              <div class="mock-photo"></div>
+              <div class="mock-photo"><img src="michelle-hero-arvore.jpg" alt="Foto real do site da psic&oacute;loga"></div>
+            </div>
+            <div class="service-shots" aria-label="Exemplos de se&ccedil;&otilde;es com fotos reais">
+              <div class="service-shot"><img src="michelle-terapia.jpg" alt="Foto real para terapia"></div>
+              <div class="service-shot"><img src="servico-terapia-infantil.jpg" alt="Foto real para servi&ccedil;o infantil"></div>
+              <div class="service-shot"><img src="supervisao-livro-tcc.jpg" alt="Foto real para supervis&atilde;o"></div>
             </div>
           </div>
         </div>
         <div class="phone-mock" aria-label="Mockup do site no celular">
           <div class="phone-screen">
-            <div class="phone-photo"></div>
+            <div class="phone-photo"><img src="michelle-terapia-online.jpg" alt="Foto real do site no celular"></div>
             <div class="phone-copy">
               <span></span>
               <div class="phone-title"></div>
