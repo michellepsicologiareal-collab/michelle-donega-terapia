@@ -49,12 +49,43 @@
     .mini{min-height:158px;border:1px solid var(--line);border-radius:24px;background:#fff;padding:22px;display:flex;flex-direction:column;justify-content:space-between}
     .mini strong{font-size:19px}
     .mini span{color:var(--muted);line-height:1.55;margin-top:10px}
+    .mockups{padding:82px 7vw;background:linear-gradient(180deg,#fff,var(--paper));border-top:1px solid var(--line)}
+    .mockups-head{max-width:760px;margin:0 auto 38px;text-align:center}
+    .mockups-head h2{font-family:"Instrument Serif",Georgia,serif;font-size:clamp(44px,5vw,76px);line-height:.95;font-weight:400;margin:18px 0 14px}
+    .mockups-head h2 em{color:var(--lilac);font-style:italic}
+    .mockups-head p{margin:0 auto;color:var(--muted);font-size:18px;line-height:1.7;max-width:620px}
+    .mockup-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;max-width:1180px;margin:0 auto;align-items:stretch}
+    .browser-mock,.phone-mock{border:1px solid var(--line);background:rgba(255,255,255,.86);box-shadow:var(--shadow);overflow:hidden}
+    .browser-mock{border-radius:32px}
+    .mock-bar{height:46px;display:flex;align-items:center;gap:8px;padding:0 18px;background:var(--wine);color:#fff;font-size:13px;font-weight:700}
+    .mock-dot{width:10px;height:10px;border-radius:50%;background:#eec9b1}
+    .mock-dot:nth-child(2){background:#d7c5ea}.mock-dot:nth-child(3){background:#c8d9be}
+    .mock-screen{padding:34px;background:linear-gradient(135deg,#fff,#f4eef5)}
+    .mock-hero{display:grid;grid-template-columns:1fr .78fr;gap:24px;align-items:center}
+    .mock-copy span,.phone-copy span{display:inline-block;width:120px;height:18px;border-radius:999px;background:#efe8f4;margin-bottom:18px}
+    .mock-title{height:118px;border-radius:18px;background:linear-gradient(180deg,var(--wine),#8d7bb0);opacity:.9}
+    .mock-lines{display:grid;gap:9px;margin-top:20px}
+    .mock-lines i{display:block;height:10px;border-radius:999px;background:#ded6d2}
+    .mock-lines i:nth-child(2){width:84%}.mock-lines i:nth-child(3){width:64%}
+    .mock-buttons{display:flex;gap:10px;margin-top:24px}
+    .mock-buttons b{width:118px;height:42px;border-radius:14px;background:var(--wine)}
+    .mock-buttons b:last-child{background:#fff;border:1px solid var(--line)}
+    .mock-photo{height:340px;border-radius:28px;background:radial-gradient(circle at 40% 42%,rgba(255,255,255,.55),transparent 18%),linear-gradient(135deg,#d8e4e8,#f4eef5 46%,#c4b9aa);position:relative;overflow:hidden}
+    .mock-photo:after{content:"";position:absolute;right:24px;bottom:24px;width:128px;height:104px;border-radius:22px;background:#fff;box-shadow:0 18px 40px rgba(75,32,43,.14)}
+    .phone-mock{border-radius:38px;max-width:370px;justify-self:center;padding:16px;background:#2b2428}
+    .phone-screen{min-height:520px;border-radius:28px;background:#fff;overflow:hidden}
+    .phone-photo{height:210px;background:linear-gradient(135deg,#d8e4e8,#f4eef5 55%,#b9a7c9)}
+    .phone-copy{padding:24px}
+    .phone-title{height:86px;border-radius:18px;background:linear-gradient(180deg,var(--wine),#8d7bb0);opacity:.88}
+    .phone-card{height:86px;margin-top:18px;border:1px solid var(--line);border-radius:20px;background:#fbfaf8}
+    .phone-cta{height:46px;margin-top:18px;border-radius:16px;background:linear-gradient(120deg,var(--clay),var(--lilac))}
     .strip{padding:34px 7vw;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;background:#fff}
     .strip p{margin:0;color:var(--muted);line-height:1.6}
     @media (max-width:900px){
       .nav{padding:14px 22px}.links{display:none}
       .hero{grid-template-columns:1fr;padding:54px 22px 62px;gap:28px}
       .panel{border-radius:26px;padding:18px}.cards{grid-template-columns:1fr}
+      .mockups{padding:56px 22px}.mockup-grid{grid-template-columns:1fr}.mock-hero{grid-template-columns:1fr}.mock-photo{height:260px}.phone-mock{width:100%;max-width:360px}
       .strip{display:block;padding:30px 22px}.strip .btn{margin-top:18px;width:100%}
     }
   </style>
@@ -69,6 +100,7 @@
     <div class="links">
       <a href="#inicio">In&iacute;cio</a>
       <a href="#entregas">O que inclui</a>
+      <a href="#mockups">Mockups</a>
       <a href="#contato">Contato</a>
       <a class="btn primary" href="https://wa.me/5511947388423" target="_blank" rel="noopener">WhatsApp</a>
     </div>
@@ -98,6 +130,41 @@
           <div class="mini"><strong>Mobile</strong><span>Layout pensado para celular, leitura r&aacute;pida e convers&atilde;o.</span></div>
         </div>
       </aside>
+    </section>
+
+    <section class="mockups" id="mockups">
+      <div class="mockups-head">
+        <span class="eyebrow">Mockups do site</span>
+        <h2>Como sua p&aacute;gina pode aparecer no <em>computador e no celular.</em></h2>
+        <p>Estrutura visual pensada para apresentar sua cl&iacute;nica, seus servi&ccedil;os, sua autoridade e o caminho de contato sem parecer gen&eacute;rica.</p>
+      </div>
+      <div class="mockup-grid">
+        <div class="browser-mock" aria-label="Mockup do site no computador">
+          <div class="mock-bar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span> site da psic&oacute;loga</div>
+          <div class="mock-screen">
+            <div class="mock-hero">
+              <div class="mock-copy">
+                <span></span>
+                <div class="mock-title"></div>
+                <div class="mock-lines"><i></i><i></i><i></i></div>
+                <div class="mock-buttons"><b></b><b></b></div>
+              </div>
+              <div class="mock-photo"></div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-mock" aria-label="Mockup do site no celular">
+          <div class="phone-screen">
+            <div class="phone-photo"></div>
+            <div class="phone-copy">
+              <span></span>
+              <div class="phone-title"></div>
+              <div class="phone-card"></div>
+              <div class="phone-cta"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="strip" id="contato">
