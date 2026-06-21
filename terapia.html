@@ -203,6 +203,19 @@
     .anxiety-item span { font-family: 'Instrument Serif', serif; font-size: 22px; line-height: 1; color: var(--r2); }
     .anxiety-item p { font-size: 14px; line-height: 1.75; color: var(--ink-2); }
     .text-link { display: inline-flex; align-items: center; gap: 8px; color: var(--r1); text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; border-bottom: 1px solid rgba(61,34,53,.28); padding-bottom: 4px; }
+
+    .specialties-head { display: grid; grid-template-columns: minmax(0,.95fr) minmax(260px,.8fr); gap: clamp(28px,5vw,72px); align-items: end; margin-bottom: 2.5rem; }
+    .specialty-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .specialty { overflow: hidden; border: 1px solid var(--border); border-radius: 28px; background: #fff; text-decoration: none; color: inherit; box-shadow: 0 18px 46px rgba(61,34,53,.07); transition: transform .18s ease, box-shadow .18s ease; }
+    .specialty:hover { transform: translateY(-3px); box-shadow: 0 28px 70px rgba(61,34,53,.12); }
+    .specialty figure { height: 220px; overflow: hidden; background: #f2ebe7; }
+    .specialty img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+    .specialty:hover img { transform: scale(1.035); }
+    .specialty-body { padding: clamp(22px,2.7vw,32px); }
+    .specialty small { display: block; margin-bottom: 18px; color: var(--r3); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .specialty h3 { color: var(--r1); font-family: 'Instrument Serif', serif; font-size: clamp(28px,3vw,38px); line-height: 1.05; font-weight: 400; }
+    .specialty p { margin-top: 14px; color: var(--ink-3); font-size: 14px; line-height: 1.75; }
+    .specialty-more { display: inline-block; margin-top: 18px; color: var(--r1); font-size: 13px; font-weight: 700; }
     .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 16px; }
     .scard { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-card); transition: transform 0.22s cubic-bezier(.22,.68,0,1.2), box-shadow 0.22s, border-color 0.2s; }
     .scard:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); border-color: var(--r3); }
@@ -402,6 +415,8 @@
     .service-row { grid-template-columns: 1fr !important; gap: .65rem !important; padding: 1.35rem 0 !important; }
     .service-kicker { padding-top: 0 !important; }
     .service-link { justify-self: start !important; margin-top: .25rem !important; }
+    .specialties-head, .specialty-grid { grid-template-columns: 1fr !important; }
+    .specialty figure { height: 210px !important; }
     .care-grid { grid-template-columns: 1fr !important; }
     .care-card { border-right: 0 !important; }
     .anxiety-feature { padding: 3.75rem 1.25rem !important; }
@@ -502,19 +517,42 @@
   </div>
 </section>
 <section class="section" id="terapia">
-  <div class="sec-eyebrow">Terapia</div>
-  <h2>Cuidado clínico para diferentes idades e formas de <em>ansiedade</em>.</h2>
-  <p class="sec-sub">A ansiedade é um dos eixos centrais do atendimento, mas ela aparece de formas muito diferentes em cada fase da vida. O cuidado olha para sintomas, contexto, vínculos e desenvolvimento.</p>
-
-  <div class="care-grid">
-    <a class="care-card" href="ansiedade.html"><small>01</small><span class="care-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20c4 0 7-3.2 7-7.2 0-4.8-3.5-8.8-7-8.8s-7 4-7 8.8C5 16.8 8 20 12 20Z"/><path d="M9 13c.8.8 1.8 1.2 3 1.2s2.2-.4 3-1.2"/></svg></span><h3>Ansiedade infantil</h3><p>Medos, insegurança, queixas físicas, irritabilidade, dificuldade de separação, sono e adaptação escolar.</p></a>
-    <a class="care-card" href="https://michellepsicologiareal-collab.github.io/formulario-psicologia/" target="_blank" rel="noopener"><small>02</small><span class="care-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21c4.4 0 8-3.6 8-8s-3.6-8-8-8-8 3.6-8 8 3.6 8 8 8Z"/><path d="M8.5 10.5h.01"/><path d="M15.5 10.5h.01"/><path d="M9 15c1 .8 2 1.2 3 1.2s2-.4 3-1.2"/></svg></span><h3>Adolescentes</h3><p>Ansiedade social, autoestima, comparação, pressão escolar, identidade, conflitos familiares e regulação emocional.</p></a>
-    <a class="care-card" href="https://michellepsicologiareal-collab.github.io/formulario-psicologia/" target="_blank" rel="noopener"><small>03</small><span class="care-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 8v5l3 2"/></svg></span><h3>Adultos ansiosos</h3><p>Preocupação excessiva, crises, controle, autocobrança, culpa, procrastinação emocional e exaustão.</p></a>
-    <a class="care-card" href="https://michellepsicologiareal-collab.github.io/formulario-psicologia/" target="_blank" rel="noopener"><small>04</small><span class="care-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18c2.2-4.4 5-6.6 8-6.6S17.8 13.6 20 18"/><path d="M8.5 8a3.5 3.5 0 1 0 7 0 3.5 3.5 0 0 0-7 0Z"/></svg></span><h3>Orientação parental</h3><p>Leitura clínica do comportamento, manejo emocional, limites, rotina e apoio aos responsáveis no processo terapêutico.</p></a>
-    <a class="care-card" href="https://michellepsicologiareal-collab.github.io/formulario-psicologia/" target="_blank" rel="noopener"><small>05</small><span class="care-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M16 20a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="m11 9 2 2"/></svg></span><h3>Relacionamentos</h3><p>Limites, dependência emocional, conflitos, repetições, comunicação difícil e escolhas afetivas.</p></a>
-    <a class="care-card" href="https://michellepsicologiareal-collab.github.io/formulario-psicologia/" target="_blank" rel="noopener"><small>06</small><span class="care-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v6"/><path d="m7 6 5 3 5-3"/><path d="M6 21h12"/><path d="M8 17h8"/><path d="M10 13h4"/></svg></span><h3>Burnout e autocobrança</h3><p>Esgotamento, perfeccionismo, pressão profissional, dificuldade de descansar e sensação de nunca bastar.</p></a>
-  </div>
-</section>
+      <div class="container">
+        <div class="specialties-head">
+          <div>
+            <span class="eyebrow ">Terapia</span>
+            <h2 class="section-title ">Cuidado clínico para diferentes idades e formas de <em>ansiedade</em>.</h2>
+          </div>
+          <p class="section-lead ">A ansiedade é um dos eixos centrais do atendimento, mas ela aparece de formas muito diferentes em cada fase da vida. A clínica olha para sintomas, contexto, vínculos e desenvolvimento.</p>
+        </div>
+        <div class="specialty-grid">
+          <a class="specialty " href="adultos-ansiosos.html">
+            <figure><img src="servico-adultos-ansiosos.jpg?v=20260619" alt="Pessoa adulta em sofrimento emocional com as m&atilde;os no rosto" /></figure>
+            <div class="specialty-body"><small>01</small><h3>Adultos Ansiosos</h3><p>Preocupa&ccedil;&otilde;es excessivas, crises de ansiedade, autocobran&ccedil;a, dificuldade para descansar, sensa&ccedil;&atilde;o de estar sempre atrasado ou sobrecarregado. A terapia ajuda a compreender os padr&otilde;es que alimentam a ansiedade e desenvolver habilidades pr&aacute;ticas para recuperar equil&iacute;brio, clareza e qualidade de vida.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
+          <a class="specialty " href="relacionamentos.html">
+            <figure><img src="servico-relacionamentos.jpg?v=20260619" alt="Duas pessoas de m&atilde;os dadas em gesto de apoio" /></figure>
+            <div class="specialty-body"><small>02</small><h3>Relacionamentos</h3><p>Relacionamentos saud&aacute;veis come&ccedil;am pela forma como nos relacionamos conosco. Depend&ecirc;ncia emocional, dificuldade de impor limites, medo de rejei&ccedil;&atilde;o, conflitos repetitivos e padr&otilde;es que se repetem ao longo da vida podem gerar sofrimento significativo.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
+          <a class="specialty " href="burnout-autocobranca.html">
+            <figure><img src="servico-burnout-autocobranca.jpg?v=20260619" alt="Pessoa sobrecarregada cercada por cobran&ccedil;as" /></figure>
+            <div class="specialty-body"><small>03</small><h3>Burnout e Autocobran&ccedil;a</h3><p>Cansa&ccedil;o constante, perfeccionismo, sensa&ccedil;&atilde;o de nunca fazer o suficiente, dificuldade para desligar a mente e aproveitar momentos de descanso. A terapia ajuda a desenvolver uma rela&ccedil;&atilde;o mais saud&aacute;vel com trabalho, desempenho e bem-estar.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
+          <a class="specialty " href="adolescentes.html">
+            <figure><img src="servico-adolescentes.jpg?v=20260619" alt="Adolescentes olhando para um celular em ambiente externo" /></figure>
+            <div class="specialty-body"><small>04</small><h3>Adolescentes</h3><p>Ansiedade, autoestima, compara&ccedil;&atilde;o constante, press&atilde;o escolar, conflitos familiares, inseguran&ccedil;as e dificuldades emocionais podem tornar essa fase mais dif&iacute;cil. A terapia favorece autoconhecimento, regula&ccedil;&atilde;o emocional e confian&ccedil;a.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
+          <a class="specialty " href="ansiedade-infantil.html">
+            <figure><img src="servico-ansiedade-infantil-card.jpg?v=20260619" alt="Crian&ccedil;a pensativa em ambiente dom&eacute;stico" /></figure>
+            <div class="specialty-body"><small>05</small><h3>Ansiedade Infantil</h3><p>Medos intensos, inseguran&ccedil;a, irritabilidade, dores sem explica&ccedil;&atilde;o m&eacute;dica, dificuldade para dormir, separar-se dos pais ou enfrentar situa&ccedil;&otilde;es do dia a dia. O trabalho terap&ecirc;utico ajuda a crian&ccedil;a a compreender emo&ccedil;&otilde;es e desenvolver seguran&ccedil;a.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
+          <a class="specialty " href="orientacao-parental.html">
+            <figure><img src="servico-orientacao-parental.jpg?v=20260619" alt="Casal em conversa de orienta&ccedil;&atilde;o com profissional" /></figure>
+            <div class="specialty-body"><small>06</small><h3>Orienta&ccedil;&atilde;o Parental</h3><p>Nem sempre a dificuldade est&aacute; na crian&ccedil;a. Muitas vezes ela est&aacute; tentando comunicar algo atrav&eacute;s das emo&ccedil;&otilde;es e atitudes. A orienta&ccedil;&atilde;o parental oferece estrat&eacute;gias baseadas em evid&ecirc;ncias para fortalecer v&iacute;nculos e limites saud&aacute;veis.</p><span class="specialty-more">Conhecer este cuidado &rarr;</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
 
 <section class="anxiety-feature" id="ansiedade">
   <div class="anxiety-inner">
