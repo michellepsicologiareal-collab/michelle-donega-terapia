@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sites para psis — Michelle Doneg&aacute; | Psicologia Real</title>
+  <meta name="description" content="Sites profissionais para psic&oacute;logas, com identidade visual, clareza de servi&ccedil;os e caminho simples para contato." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --paper:#fbfaf8;
+      --soft:#f4eef5;
+      --ink:#2b2428;
+      --muted:#817773;
+      --wine:#4b202b;
+      --clay:#7d513d;
+      --lilac:#8d7bb0;
+      --line:#e6dcd7;
+      --white:#fff;
+      --shadow:0 24px 60px rgba(75,32,43,.12);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .topbar{height:8px;background:var(--wine)}
+    .nav{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:28px;padding:18px 7vw;background:rgba(251,250,248,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand img{width:44px;height:44px;border-radius:50%;box-shadow:0 8px 22px rgba(75,32,43,.12)}
+    .brand span span{color:var(--lilac)}
+    .links{display:flex;align-items:center;gap:24px;font-weight:700;color:#625854}
+    .links a:hover{color:var(--wine)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:18px;padding:15px 24px;font-weight:800;border:1px solid var(--line)}
+    .btn.primary{background:linear-gradient(120deg,var(--clay),var(--lilac));color:white;box-shadow:var(--shadow);border:0}
+    .btn.light{background:rgba(255,255,255,.72)}
+    .hero{min-height:calc(100vh - 84px);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:54px;align-items:center;padding:8vh 7vw 9vh;background:radial-gradient(circle at 78% 25%,rgba(141,123,176,.18),transparent 34%),linear-gradient(135deg,#fff 0%,#fbfaf8 58%,#eef6f8 100%)}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;width:max-content;padding:8px 14px;border:1px solid #ded3e8;border-radius:999px;background:#f4effa;color:var(--wine);font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lilac)}
+    h1{font-family:"Instrument Serif",Georgia,serif;font-size:clamp(52px,7vw,108px);line-height:.9;letter-spacing:-.02em;margin:24px 0 22px;font-weight:400;max-width:780px}
+    h1 em{color:var(--lilac);font-style:italic}
+    .lead{font-size:clamp(18px,1.4vw,23px);line-height:1.72;color:var(--muted);max-width:700px;margin:0 0 34px}
+    .actions{display:flex;flex-wrap:wrap;gap:14px}
+    .panel{border:1px solid var(--line);border-radius:34px;background:rgba(255,255,255,.78);box-shadow:var(--shadow);padding:26px}
+    .panel-head{padding:28px;border-radius:26px;background:linear-gradient(135deg,#f7eef0,#f2f0fb);border:1px solid #eadfe4}
+    .panel-head h2{font-family:"Instrument Serif",Georgia,serif;font-size:44px;line-height:1;margin:0 0 12px;font-weight:400}
+    .panel-head p{margin:0;color:var(--muted);line-height:1.7}
+    .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+    .mini{min-height:158px;border:1px solid var(--line);border-radius:24px;background:#fff;padding:22px;display:flex;flex-direction:column;justify-content:space-between}
+    .mini strong{font-size:19px}
+    .mini span{color:var(--muted);line-height:1.55;margin-top:10px}
+    .strip{padding:34px 7vw;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;background:#fff}
+    .strip p{margin:0;color:var(--muted);line-height:1.6}
+    @media (max-width:900px){
+      .nav{padding:14px 22px}.links{display:none}
+      .hero{grid-template-columns:1fr;padding:54px 22px 62px;gap:28px}
+      .panel{border-radius:26px;padding:18px}.cards{grid-template-columns:1fr}
+      .strip{display:block;padding:30px 22px}.strip .btn{margin-top:18px;width:100%}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar"></div>
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <img src="logo-psicologia-real.png" alt="Psicologia Real">
+      <span>Psicologia <span>Real</span></span>
+    </a>
+    <div class="links">
+      <a href="terapia.html">Terapia</a>
+      <a href="supervisao.html">Supervis&atilde;o</a>
+      <a href="produtos-psicologos.html">Produtos para psis</a>
+      <a href="https://psireal.com.br/biblioteca-tcc/index.html">Biblioteca</a>
+      <a class="btn primary" href="https://wa.me/5511947388423" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">Sites para psis</span>
+        <h1>Uma presen&ccedil;a digital com cara de <em>cl&iacute;nica real.</em></h1>
+        <p class="lead">Sites para psic&oacute;logas que precisam apresentar servi&ccedil;os, construir autoridade e facilitar o primeiro contato, sem perder delicadeza, clareza e identidade profissional.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://wa.me/5511947388423" target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
+          <a class="btn light" href="https://michellepsicologiareal-collab.github.io/formulario-psicologia/" target="_blank" rel="noopener">Abrir formul&aacute;rio</a>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <div class="panel-head">
+          <h2>Do zero ao ar, com dire&ccedil;&atilde;o.</h2>
+          <p>Uma p&aacute;gina moderna, responsiva e alinhada ao seu posicionamento cl&iacute;nico.</p>
+        </div>
+        <div class="cards">
+          <div class="mini"><strong>Identidade</strong><span>Cores, tipografia e linguagem coerentes com sua pr&aacute;tica.</span></div>
+          <div class="mini"><strong>Servi&ccedil;os</strong><span>Organiza suas frentes de atendimento em caminhos simples.</span></div>
+          <div class="mini"><strong>Contato</strong><span>Bot&otilde;es para WhatsApp e formul&aacute;rio de primeiro contato.</span></div>
+          <div class="mini"><strong>Mobile</strong><span>Layout pensado para celular, leitura r&aacute;pida e convers&atilde;o.</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="strip">
+      <p><strong>Para psic&oacute;logas que querem um site bonito, claro e funcional.</strong><br>Sem excesso de texto, sem visual gen&eacute;rico e com um caminho de contato objetivo.</p>
+      <a class="btn primary" href="https://wa.me/5511947388423" target="_blank" rel="noopener">Quero meu site</a>
+    </section>
+  </main>
+</body>
+</html>
