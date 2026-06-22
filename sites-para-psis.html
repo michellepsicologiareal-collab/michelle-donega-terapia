@@ -54,34 +54,38 @@
     .mockups-head h2{font-family:"Instrument Serif",Georgia,serif;font-size:clamp(44px,5vw,76px);line-height:.95;font-weight:400;margin:18px 0 14px}
     .mockups-head h2 em{color:var(--lilac);font-style:italic}
     .mockups-head p{margin:0 auto;color:var(--muted);font-size:18px;line-height:1.7;max-width:620px}
-    .mockup-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;max-width:1180px;margin:0 auto;align-items:stretch}
-    .browser-mock,.phone-mock{border:1px solid var(--line);background:rgba(255,255,255,.86);box-shadow:var(--shadow);overflow:hidden}
-    .browser-mock{border-radius:32px}
+    .mockup-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);gap:26px;max-width:1180px;margin:0 auto;align-items:stretch}
+    .browser-mock,.phone-mock{border:1px solid var(--line);background:rgba(255,255,255,.92);box-shadow:var(--shadow);overflow:hidden}
+    .browser-mock{border-radius:34px}
     .mock-bar{height:46px;display:flex;align-items:center;gap:8px;padding:0 18px;background:var(--wine);color:#fff;font-size:13px;font-weight:700}
     .mock-dot{width:10px;height:10px;border-radius:50%;background:#eec9b1}
     .mock-dot:nth-child(2){background:#d7c5ea}.mock-dot:nth-child(3){background:#c8d9be}
-    .mock-screen{padding:34px;background:linear-gradient(135deg,#fff,#f4eef5)}
-    .mock-hero{display:grid;grid-template-columns:1fr .78fr;gap:24px;align-items:center}
-    .mock-copy span,.phone-copy span{display:inline-block;width:120px;height:18px;border-radius:999px;background:#efe8f4;margin-bottom:18px}
-    .mock-title{height:118px;border-radius:18px;background:linear-gradient(180deg,var(--wine),#8d7bb0);opacity:.9}
-    .mock-lines{display:grid;gap:9px;margin-top:20px}
-    .mock-lines i{display:block;height:10px;border-radius:999px;background:#ded6d2}
-    .mock-lines i:nth-child(2){width:84%}.mock-lines i:nth-child(3){width:64%}
-    .mock-buttons{display:flex;gap:10px;margin-top:24px}
-    .mock-buttons b{width:118px;height:42px;border-radius:14px;background:var(--wine)}
-    .mock-buttons b:last-child{background:#fff;border:1px solid var(--line)}
-    .mock-photo{height:340px;border-radius:28px;position:relative;overflow:hidden;box-shadow:0 18px 45px rgba(75,32,43,.16)}
+    .mock-screen{padding:24px;background:linear-gradient(135deg,#fff,#f4eef5)}
+    .mock-hero{display:grid;grid-template-columns:minmax(0,.9fr) minmax(260px,1.1fr);gap:22px;align-items:center}
+    .mock-copy{padding:18px}
+    .mock-copy span,.phone-copy span{display:inline-flex;width:max-content;padding:7px 12px;border-radius:999px;background:#efe8f4;color:var(--lilac);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+    .mock-copy h3,.phone-copy h3{font-family:"Instrument Serif",Georgia,serif;font-size:clamp(34px,3vw,48px);line-height:.98;margin:0 0 14px;font-weight:400;color:var(--wine)}
+    .mock-copy p,.phone-copy p{margin:0;color:var(--muted);line-height:1.65}
+    .mock-buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .mock-buttons b{display:inline-flex;min-width:124px;min-height:40px;align-items:center;justify-content:center;border-radius:14px;background:var(--wine);color:#fff;font-size:13px}
+    .mock-buttons b:last-child{background:#fff;border:1px solid var(--line);color:var(--wine)}
+    .mock-photo{height:360px;border-radius:30px;position:relative;overflow:hidden;box-shadow:0 18px 45px rgba(75,32,43,.16)}
     .mock-photo img,.phone-photo img,.service-shot img{width:100%;height:100%;object-fit:cover;display:block}
-    .mock-photo:after{content:"20+";position:absolute;right:24px;bottom:24px;width:128px;height:104px;border-radius:22px;background:rgba(255,255,255,.9);box-shadow:0 18px 40px rgba(75,32,43,.14);display:flex;align-items:center;justify-content:center;color:var(--wine);font-size:42px;font-weight:700}
-    .service-shots{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
-    .service-shot{height:150px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 14px 32px rgba(75,32,43,.09)}
-    .phone-mock{border-radius:38px;max-width:370px;justify-self:center;padding:16px;background:#2b2428}
-    .phone-screen{min-height:520px;border-radius:28px;background:#fff;overflow:hidden}
-    .phone-photo{height:210px;overflow:hidden}
+    .mock-badge{position:absolute;right:22px;bottom:22px;width:126px;padding:18px;border-radius:22px;background:rgba(255,255,255,.92);box-shadow:0 18px 40px rgba(75,32,43,.14);color:var(--wine);font-weight:800;font-size:34px;line-height:1}
+    .mock-badge small{display:block;margin-top:6px;color:var(--muted);font-size:12px;font-weight:600;line-height:1.35}
+    .service-shots{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .service-shot{min-height:196px;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 14px 32px rgba(75,32,43,.09)}
+    .service-shot img{height:128px}
+    .service-shot strong{display:block;padding:14px 16px 0;color:var(--wine);font-size:15px}
+    .service-shot small{display:block;padding:4px 16px 16px;color:var(--muted);line-height:1.45}
+    .phone-mock{border-radius:34px;max-width:390px;justify-self:center;padding:14px;background:#fff}
+    .phone-screen{min-height:560px;border-radius:24px;background:#fbfaf8;overflow:hidden;border:1px solid var(--line)}
+    .phone-photo{height:230px;overflow:hidden}
     .phone-copy{padding:24px}
-    .phone-title{height:86px;border-radius:18px;background:linear-gradient(180deg,var(--wine),#8d7bb0);opacity:.88}
-    .phone-card{height:86px;margin-top:18px;border:1px solid var(--line);border-radius:20px;background:#fbfaf8}
-    .phone-cta{height:46px;margin-top:18px;border-radius:16px;background:linear-gradient(120deg,var(--clay),var(--lilac))}
+    .phone-card{margin-top:18px;border:1px solid var(--line);border-radius:20px;background:#fff;padding:18px}
+    .phone-card strong{display:block;color:var(--wine);font-size:15px}
+    .phone-card small{display:block;margin-top:6px;color:var(--muted);line-height:1.45}
+    .phone-cta{display:flex;align-items:center;justify-content:center;min-height:48px;margin-top:18px;border-radius:16px;background:linear-gradient(120deg,var(--clay),var(--lilac));color:#fff;font-weight:800}
     .strip{padding:34px 7vw;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;background:#fff}
     .strip p{margin:0;color:var(--muted);line-height:1.6}
     @media (max-width:900px){
@@ -147,17 +151,20 @@
           <div class="mock-screen">
             <div class="mock-hero">
               <div class="mock-copy">
-                <span></span>
-                <div class="mock-title"></div>
-                <div class="mock-lines"><i></i><i></i><i></i></div>
-                <div class="mock-buttons"><b></b><b></b></div>
+                <span>Hero principal</span>
+                <h3>Clareza para apresentar sua clínica.</h3>
+                <p>Uma primeira dobra com posicionamento, foto profissional, chamada de contato e navegação simples.</p>
+                <div class="mock-buttons"><b>Agendar conversa</b><b>Conhecer serviços</b></div>
               </div>
-              <div class="mock-photo"><img src="michelle-hero-arvore.jpg" alt="Foto real do site da psic&oacute;loga"></div>
+              <div class="mock-photo">
+                <img src="michelle-hero-arvore.jpg" alt="Foto real do site da psic&oacute;loga">
+                <div class="mock-badge">20+<small>anos de experi&ecirc;ncia</small></div>
+              </div>
             </div>
             <div class="service-shots" aria-label="Exemplos de se&ccedil;&otilde;es com fotos reais">
-              <div class="service-shot"><img src="michelle-terapia.jpg" alt="Foto real para terapia"></div>
-              <div class="service-shot"><img src="servico-terapia-infantil.jpg" alt="Foto real para servi&ccedil;o infantil"></div>
-              <div class="service-shot"><img src="supervisao-livro-tcc.jpg" alt="Foto real para supervis&atilde;o"></div>
+              <div class="service-shot"><img src="michelle-terapia.jpg" alt="Foto real para terapia"><strong>Terapia</strong><small>Servi&ccedil;os organizados em cards.</small></div>
+              <div class="service-shot"><img src="servico-terapia-infantil.jpg" alt="Foto real para servi&ccedil;o infantil"><strong>Infantil</strong><small>Cuidado por p&uacute;blico e demanda.</small></div>
+              <div class="service-shot"><img src="supervisao-livro-tcc.jpg" alt="Foto real para supervis&atilde;o"><strong>Supervis&atilde;o</strong><small>Frente para psic&oacute;logas.</small></div>
             </div>
           </div>
         </div>
@@ -165,10 +172,11 @@
           <div class="phone-screen">
             <div class="phone-photo"><img src="michelle-terapia-online.jpg" alt="Foto real do site no celular"></div>
             <div class="phone-copy">
-              <span></span>
-              <div class="phone-title"></div>
-              <div class="phone-card"></div>
-              <div class="phone-cta"></div>
+              <span>Mobile</span>
+              <h3>Bonito no celular.</h3>
+              <p>A maioria das pessoas vai chegar pelo telefone. O layout precisa carregar r&aacute;pido, ser claro e facilitar a decis&atilde;o.</p>
+              <div class="phone-card"><strong>Servi&ccedil;os em destaque</strong><small>Terapia, supervis&atilde;o, produtos ou agenda aparecem sem confus&atilde;o.</small></div>
+              <div class="phone-cta">Chamar no WhatsApp</div>
             </div>
           </div>
         </div>
